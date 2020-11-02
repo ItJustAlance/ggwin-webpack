@@ -1,0 +1,282 @@
+.chat
+  display: flex
+  flex-direction: column
+  max-width: 100%
+  &-r
+    position: relative
+    background: #111217
+    border: 1px solid #14161B
+    margin: -2rem 0 0
+  &-header
+    padding: 2rem 2rem 8rem 5rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+  &-title
+    color: #fff
+    font-size: 1rem
+    text-transform: uppercase
+
+    .status
+      letter-spacing: 0.15em
+      color: #00EC9D
+      font-size: 1.6rem
+      padding-top: .5rem
+      img
+        width: 1.2rem
+        top: -.3rem
+        position: relative
+        margin-right: 1rem
+  .specification
+    color: #3B4042
+    font-size: 1.2rem
+    display: inline-flex
+    align-items: center
+    text-transform: uppercase
+    svg
+      margin-right: 1rem
+      fill: #3B4042
+      width: 2rem
+      height: 1.7rem
+    &:hover
+      color: #fff
+      svg
+        fill: #fff !important
+  &-close
+    position: absolute
+    top: 2rem
+    left: -1rem
+    width: 4rem
+    height: 4rem
+    background: #161A1F
+    border-radius: 5px
+    align-items: center
+    display: inline-flex
+    justify-content: center
+    svg
+      width: 1.5rem
+      height: .9rem
+      fill: #3B4042
+    &:hover
+      background: #2A2E37
+      svg
+        fill: #fff
+  &-cont
+    flex: 1 1 auto
+    overflow: auto
+    max-height: calc(100vh - 24.5rem)
+
+  &-item
+    display: flex
+    width: 100%
+    max-width: 320px
+    padding: 1.5rem 2rem
+
+    &.offline
+      .chat
+        &-item
+          &-photo
+            &:before
+              background: linear-gradient(180deg, #d70f0f 0%, #b31616 100%)
+              box-shadow: 0 0 10px rgba(0, 186, 124, 0.2)
+
+    &-photo
+      min-width: 4.8rem
+      max-width: 4.8rem
+      display: block
+      position: relative
+      &:before
+        content: ""
+        width: .8rem
+        height: .8rem
+        border-radius: 50%
+        background: linear-gradient(180deg, #00FFAA 0%, #00C885 100%)
+        box-shadow: 0 0 10px rgba(0, 186, 124, 0.2)
+        position: absolute
+        z-index: 1
+        bottom: .3rem
+        right: .3rem
+      &:after
+        width: 2rem
+        height: 2rem
+        border-radius: 10px 0 0 0
+        content: ""
+        background: #111217
+        position: absolute
+        bottom: -.3rem
+        right: -.3rem
+
+    &-header
+      display: flex
+      justify-content: space-between
+      padding-bottom: .5rem
+      font-size: 1.2rem
+      width: 100%
+    &-name
+      color: #fff
+      text-transform: uppercase
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+      max-width: calc(100% - 6rem)
+    &-time
+      color: #3B4042
+    &-desc
+      line-height: 15px
+      font-size: 1.2rem
+      color: #747A7C
+      padding-bottom: 1.5rem
+  &-right
+    margin-left: 1rem
+    flex: 1 1 auto
+    max-width: calc(100% - 4.2rem)
+    border-bottom: 1px solid #27292E
+
+
+  &-bottom
+    padding-top: 1rem
+  &-form__inner
+    position: relative
+    display: -webkit-box
+    display: flex
+    -webkit-box-pack: justify
+    justify-content: space-between
+
+  &-form
+    position: relative
+    padding: 0 0 0 1.5rem
+    .field-wrapper
+      width: calc(100% - 8rem)
+      display: block
+      margin-right: 4.5rem
+
+      .field-textarea
+        font-size: 1.5rem
+        font-weight: 500
+        background: rgba(255,255,255, .1)
+        border-radius: 5px
+        color: #fff
+        width: 100%
+        padding: 1rem
+        border: none
+        height: 5rem
+
+        &:-webkit-input-placeholder,
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &:-moz-placeholder,
+        &::-ms-input-placeholder,
+        &:-ms-input-placeholder,
+        &::placeholder,
+        &:placeholder
+          color: #fff
+          opacity: 1
+
+  &-form-stats
+    position: absolute
+    top: 2rem
+    right: 1.5rem
+    width: 4.8rem
+    text-align: center
+    color: rgba(235, 239, 253, 0.2)
+    font-size: 1.2rem
+
+  .btn
+    height: 4.8rem
+    width: 4.8rem
+    cursor: pointer
+    background: radial-gradient(50% 50% at 50% 50%, #FF8000 0%, #FF4A00 100%)
+    border-radius: 5px
+    position: absolute
+    padding: 0
+    border: 1px solid #FF7A00
+    bottom: 1px
+    right: 2rem
+    svg
+      position: absolute
+      width: 2.5rem
+      height: 2.1rem
+      left: calc(50% - 1.2rem)
+      top: calc(50% - 1rem)
+      fill: #fff
+
+
+
+  &-free
+    background: linear-gradient(90deg, #FF4A00 0%, #FF6800 100%)
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 6rem
+    position: absolute
+    &__cont
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: center
+      z-index: 1
+      background: url(../img/surprize.png) 1.5rem 50% no-repeat
+      background-size: 4.7rem auto
+      padding-left: 7rem
+      height: 6rem
+    &__title
+      color: #FFD66D
+      font-size: 1.2rem
+      text-transform: uppercase
+      padding-bottom: .2rem
+      padding-top: 2 rem
+    &__timer
+      text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.7)
+      font-size: 1.7rem
+      color: #fff
+    &__arrow
+      width: 4rem
+      height: 4rem
+      top: calc(50% - 2rem)
+      position: absolute
+      right: 2rem
+      border-radius: .5rem
+      background: rgba(255,179,109, .4)
+      &:hover
+        background: rgba(255,179,109, 1)
+      svg
+        fill: #fff
+        width: 1.3rem
+        height: .8rem
+
+#noTrespassingOuterBarG
+  height: 6rem
+  width: 100%
+  overflow: hidden
+  // background-color: linear-gradient(90deg, #FF4A00 0%, #FF6800 100%)
+  position: absolute
+  top: 0
+  left: 0
+
+.noTrespassingBarLineG
+  background-color: #fe6910
+  float: left
+  width: 2rem
+  height: 24rem
+  margin-right: 4.1rem
+  margin-top: -5.6rem
+  transform: rotate(45deg)
+
+
+.noTrespassingAnimationG
+  width: 100%
+  animation-name: noTrespassingAnimationG
+  animation-duration: 1.5s
+  animation-iteration-count: infinite
+  animation-timing-function: linear
+
+
+@keyframes noTrespassingAnimationG
+  0%
+    margin-left: 0px
+
+  100%
+    margin-left: -6rem
+
+

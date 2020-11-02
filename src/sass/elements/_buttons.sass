@@ -1,0 +1,56 @@
+// buttons
+button
+  -webkit-appearance: none
+  border: 0
+  box-shadow: none
+  cursor: pointer
+  &:focus
+    outline: none
+
+.btn
+  display: inline-block
+  position: relative
+  text-align: center
+  cursor: pointer
+
+  color: #fff
+  padding: 1.6rem 1.9rem
+  background: #00BE7F
+  background: radial-gradient(50% 50% at 50% 50%, #FF8000 0%, #FF4A00 100%)
+  border-radius: .5rem
+  border: 1px solid #FF7A00
+  &:focus, &:active
+    outline: none
+  &:hover
+    background: #FF7A00
+    color: #fff
+
+  &-green
+    background: #00BE7F
+    background: linear-gradient(180deg, #00BE7F 0%, #009261 100%)
+    border: 1px solid #00BD7E
+    &:hover
+      background: #00BE7F
+  &-steam
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    max-width: 27.5rem
+    min-width: 27.5rem
+    height: 4.8rem
+    width: 100%
+    color: #fff
+    border: 1px solid #123B6A
+    background: radial-gradient(77.12% 77.12% at 50% 50%, #055A8F 0%, #0C1E3D 100%)
+    border-radius: 5px
+    .ico
+      fill: #fff
+      margin-right: 1rem
+      width: 2.4rem
+      height: 2.4rem
+    &:hover
+      background: radial-gradient(50% 50% at 50% 50%, #FF8000 0%, #FF4A00 100%)
+      color: #fff
+      border: 1px solid #27292E
+      .svg-icon
+        fill: #fff

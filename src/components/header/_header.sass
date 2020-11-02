@@ -1,0 +1,339 @@
+.active_m
+  .header
+    &__float
+      right: 0
+.header
+  background: #010101
+  height: 9rem
+  position: relative
+  +r($hd)
+    height: 6rem
+  &-left
+    display: flex
+    align-items: center
+
+  &__float
+    width: 50%
+    display: flex
+    justify-content: flex-end
+    transition: all 0.5s ease
+    +r($hd)
+      position: absolute
+      top: 0
+      right: -100%
+      background: #35373F
+      width: 90%
+      z-index: 2
+      max-width: 4.5rem
+      flex-wrap: wrap
+      padding: 7.2rem 1.5rem 1.5rem
+    .login-soc
+      display: flex
+      justify-content: center
+      align-items: center
+      min-width: 4.8rem
+      max-width: 4.8rem
+      height: 4.8rem
+      background: radial-gradient(91.67% 91.67% at 50% 50%, #4A76A8 27.58%, #1C3E65 100%)
+      border: 1px solid #4A76A8
+      border-radius: .5rem
+      margin-left: 3rem
+      svg
+        width: 2.3rem
+        height: 1.9rem
+  &__login
+    max-width: 30rem
+    display: flex
+    align-items: center
+    &--left
+      text-align: right
+      font-weight: bold
+      color: #fff
+    &--nick
+      color: #A8AEBF
+      padding-bottom: .3rem
+      display: block
+    &--profile
+      color: #fff
+      display: block
+      svg
+        fill: $clrGreen
+        margin-left: .5rem
+    &-ava
+      max-width: 4.8rem
+      min-width: 4.8rem
+      overflow: hidden
+      border-radius: 2rem
+      height: 4.8rem
+      margin-left: 1rem
+  .login-exit
+    display: flex
+    width: 3.2rem
+    height: 3.2rem
+    align-items: center
+    justify-content: center
+    background: #35373F
+    border: 1px solid #4B4E55
+    margin-left: 3rem
+    border-radius: 1.4rem
+    +r($hd)
+      margin-left: 0
+      position: relative
+      left: .2rem
+    &:hover
+      .ico
+        fill: $clrGreen
+    .ico
+      width: 1.3rem
+      height: 1.3rem
+      fill: #A8AEBF
+
+  .container
+    display: flex
+    align-items: center
+    position: relative
+    justify-content: space-between
+
+  .b-logo
+    width: 20rem
+  .logo
+    display: block
+    margin-right: 5rem
+    .ico
+      width: 5.5rem
+      height: 2.6rem
+
+    +r($sm)
+      margin-right: 1.5rem
+      width: 14rem
+  &__icons
+    display: flex
+    align-items: center
+    margin-right: 3rem
+    +r($sm)
+      margin-right: 1.5rem
+    &--sound
+      cursor: pointer
+      width: 4.8rem
+      height: 4.8rem
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 5px
+      background: #161A1F
+      margin-right: 1.5rem
+      svg
+        fill: #3B4042
+        width: 1.9rem
+        height: 1.9rem
+      &:hover
+        border-color: #ADFF00
+  &__lang
+    position: relative
+    background: #161A1F
+    height: 4.8rem
+    border-radius: 5px
+    padding: 0 1.2rem
+    display: inline-flex
+    align-items: center
+    vertical-align: top
+    margin-right: 1.2rem
+    &--value
+      cursor: pointer
+      padding-right: 2.1rem
+      font-size: 1.2rem
+      display: flex
+      align-items: center
+      span
+        margin-left: 1rem
+      .ico--arr-down
+        width: 1.3rem
+        height: .8rem
+        position: absolute
+        top: 2rem
+        right: 1rem
+
+    &--list
+      display: none
+      position: absolute
+      top: 105%
+      left: 0
+      width: 6.5rem
+      background: #35373F
+      border: 1px solid #4B4E55
+      ul
+        li
+          font-size: 1.1rem
+          display: block
+          a
+            color: #fff
+            display: flex
+            width: 100%
+            padding: .7rem .5rem
+            &:hover
+              background: rgba(255,255,255, .1)
+              color: #fff
+          .ic
+            display: block
+            width: 2rem
+            max-width: 2rem
+          img
+            width: 1.5rem
+  .double-check
+    background: #161A1F
+    border-radius: 5px
+    display: flex
+    button
+      width: 11.5rem
+      height: 4.8rem
+      border-radius: 5px
+      color: #3B4042
+      display: inline-flex
+      align-items: center
+      background: #161A1F
+      padding: 0 1.3rem
+      font-size: 1.2rem
+      text-transform: uppercase
+      img
+        margin-right: 1.1rem
+        opacity: .5
+        width: 2.3rem
+        height: 1.9rem
+      &.btn-crash
+        &.active
+          background: radial-gradient(71.87% 71.87% at 50% 50%, #BC002D 24.48%, #3C0000 100%)
+          border: 1px solid #8A0A01
+          color: #fff
+          img
+            opacity: 1
+      &.btn-double
+        &.active
+          background: radial-gradient(71.87% 71.87% at 50% 50%, #034593 24.48%, #01003C 100%)
+          border: 1px solid #032781
+          color: #fff
+          svg
+            opacity: 1
+  &__nav
+    flex: 1 1 auto
+    max-width: 40rem
+    font-size: 1.4rem
+    +r($hd)
+      order: 1
+      padding-top: 2rem
+    ul
+      display: flex
+      align-items: center
+      width: 100%
+      justify-content: space-between
+      +r($hd)
+        display: block
+      li
+        display: flex
+        height: 10rem
+        font-weight: bold
+        margin-right: 3rem
+        +r($hd)
+          height: auto
+          width: 100%
+          margin-bottom: 2rem
+        a
+          display: inline-flex
+          white-space: nowrap
+          align-items: center
+          color: #3B4042
+          &:hover, &.router-link-active
+            color: #fff
+            .ico
+              fill: #fff !important
+            +r($hd)
+              border: none
+        .ico
+          fill: #3B4042
+          height: 2.2rem
+          margin-right: 1rem
+          width: 2.2rem
+          display: inline-block
+          vertical-align: top
+          position: relative
+          top: 0
+  &__steam
+    display: flex
+    max-width: 44rem
+    align-items: center
+    +r($hd)
+      order: 0
+      max-width: 100%
+      width: 100%
+      justify-content: space-between
+#hamburger-icon
+  width: 2.2rem
+  height: 1.8rem
+  z-index: 1001
+  line-height: 1
+  position: absolute
+  top: 2rem
+  right: 1.5rem
+  display: none
+  color: #ADFF00
+
+body.active_m #hamburger-icon
+  height: 2rem
+
+#hamburger-icon
+  .line
+    display: block
+    background-color: #ADFF00
+    width: 2.2rem
+    height: .3rem
+    position: absolute
+    transition: all 0.4s
+    -webkit-transition: all 0.4s
+    -moz-transition: all 0.4s
+
+  strong
+    position: absolute
+    left: 100%
+    top: .5rem
+    margin-left: 1rem
+
+.active_m .line
+  background: #ADFF00
+
+#hamburger-icon
+  .line
+    &.line-1
+      top: 0
+
+    &.line-2
+      top: 50%
+
+    &.line-3
+      top: 100%
+
+  &:hover .line-1, &:focus .line-1
+    transform: translateY(-4px)
+    -webkit-transform: translateY(-4px)
+    -moz-transform: translateY(-4px)
+
+  &:hover .line-3, &:focus .line-3
+    transform: translateY(4px)
+    -webkit-transform: translateY(4px)
+    -moz-transform: translateY(4px)
+
++r($xl)
+  #hamburger-icon
+    display: block
+  body.active_m #hamburger-icon
+    .line-1
+      transform: translateY(10px) translateX(0) rotate(45deg)
+      -webkit-transform: translateY(10px) translateX(0) rotate(45deg)
+      -moz-transform: translateY(10px) translateX(0) rotate(45deg)
+
+    .line-2
+      opacity: 0
+
+    .line-3
+      transform: translateY(-10px) translateX(0) rotate(-45deg)
+      -webkit-transform: translateY(-10px) translateX(0) rotate(-45deg)
+      -moz-transform: translateY(-10px) translateX(0) rotate(-45deg)
+

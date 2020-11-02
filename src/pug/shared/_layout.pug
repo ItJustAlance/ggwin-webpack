@@ -1,0 +1,18 @@
+include ../utilities/_mixins
+
+doctype html
+html(lang="ru")
+  head
+    include _head
+  body(class=bodyClass)
+    #barba-wrapper.over
+      block header
+        include ../../components/header/_header
+
+      // content
+      main.page(class=outClass)
+        block content
+
+
+    block scripts
+      include _scripts

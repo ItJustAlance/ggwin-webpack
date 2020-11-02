@@ -1,0 +1,350 @@
+.b-athorization
+  width: 100%
+  max-height: 38rem
+  height: 40vh
+  background-image: url(../img/auth.png)
+  background-position: 50% 50%
+  background-repeat: no-repeat
+  background-size: auto 32rem
+  text-align: center
+
+  a
+    position: absolute
+    bottom: 1.5rem
+    left: calc(50% - 8.5rem)
+    display: block
+    color: #747A7C
+    margin: 0 auto
+    width: 17rem
+    &:hover
+      color: #fff
+
+
+.b-inventar
+  display: flex
+  flex-direction: column
+  overflow: hidden
+  min-height: 100%
+.inventar
+  &-title
+    color: #747A7C
+    font-size: 1.2rem
+    text-transform: uppercase
+    padding: 2rem 2rem 1rem
+  &-top
+    padding: 0 0 1.5rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 0 2rem 2rem
+    border-bottom: 1px solid #212126
+    img
+      vertical-align: middle
+      margin-right: .5rem
+    .title
+      font-size: 1.8rem
+      color: #fff
+      min-height: 2.2rem
+      text-transform: uppercase
+
+    .cost
+      color: #fff
+      font-size: 1.6rem
+      display: inline-block
+      vertical-align: middle
+    .change .cost
+      color: #fff
+
+    .all-check
+      position: relative
+      padding-right: 3rem
+      color: #3B4042
+      font-size: 1.2rem
+      text-transform: uppercase
+      .text
+        margin-top: 0
+      img
+        margin-right: 0
+  &-scroll
+    display: flex
+    flex-wrap: wrap
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 1.5rem
+    right: 1.5rem
+    overflow: auto
+  &-cont
+    flex: 1 1 auto
+    display: flex
+    overflow: hidden
+
+  &-list
+    margin: 0 .1rem
+    overflow: hidden
+    flex-wrap: wrap
+    flex: 1 1 auto
+    position: relative
+    height: 100%
+
+  &-col
+    display: block
+    width: 50%
+    font-size: 1.2rem
+    padding: .5rem
+    overflow: hidden
+
+  &-item
+    background: #161A1F url(../img/item-blue.svg) 50% 50% no-repeat
+    background-size: 60% auto
+    border: 1px solid #747A7C
+    padding: 1.2rem
+    border-radius: 5px
+    position: relative
+
+    &:after
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      border-radius: 50%
+      display: block
+      width: 1px
+      height: 1px
+      box-shadow: 0 0 4rem 5rem rgba(24, 75, 255, 0.4)
+
+    &.red
+      background-image: url(../img/item-red.svg)
+      &:after
+        box-shadow: 0 0 4rem 5rem rgba(252,89,255, 0.4)
+    &.pink
+      background-image: url(../img/item-pink.svg)
+      &:after
+        box-shadow: 0 0 4rem 5rem rgba(255,18,32, 0.4)
+
+    .cost
+      color: #fff
+      font-size: 1.2rem
+      background: url('../img/valuta.svg') 0 50% no-repeat
+      background-size: auto 100%
+      padding: .6rem 0 .6rem 3.7rem
+    .img
+      display: flex
+      align-items: center
+      height: 10rem
+      width: 13rem
+      margin: 0 auto
+      position: relative
+      z-index: 1
+
+      span
+        display: block
+        width: 100%
+        text-align: center
+
+      img
+        max-width: 96%
+        max-height: 76%
+    .st
+      position: absolute
+      top: 1.8rem
+      right: 0
+      font-size: 1.2rem
+      color: #747A7C
+      text-transform: uppercase
+      span
+        display: inline-block
+        margin-right: 1rem
+        &.act
+          color: #FF5C00
+    .bottom
+      font-size: 1.4rem
+      position: relative
+      text-align: center
+
+    .name
+      color: #fff
+      overflow: hidden
+      white-space: nowrap
+
+    .key
+      font-size: 1.2rem
+      overflow: hidden
+      color: #747A7C
+      white-space: nowrap
+
+  &-bottom
+    display: flex
+    z-index: 2
+    position: absolute
+    bottom: 2rem
+    left: 2rem
+    right: 2rem
+    .btn-exchange
+      cursor: pointer
+      height: 4.8rem
+      text-transform: uppercase
+      border-radius: .5rem
+      flex: 1 1 auto
+      color: #fff
+      margin-right: 1rem
+      text-align: center
+      padding: 0
+      font-size: 1.2rem
+      svg
+        display: inline-block
+        height: 1.7rem
+        vertical-align: middle
+        position: relative
+        left: -.5rem
+        top: -.3rem
+
+    .btn-dw
+      cursor: pointer
+      height: 4.8rem
+      text-transform: uppercase
+      padding: 0
+      width: 4.8rem
+      color: #fff
+      text-align: center
+      svg
+        display: inline-block
+        vertical-align: middle
+        height: 2rem
+        position: relative
+
+  &-locked
+    max-height: 100%
+    color: #747A7C
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    &__center
+    .text
+      max-width: 21.5rem
+      margin: 0 auto 3rem
+      a
+        color: #747A7C
+        &:hover
+          color: #fff
+
+
+
+.checker
+  position: absolute
+  top: -.2rem
+  right: 0
+  cursor: pointer
+  input
+    opacity: 0
+    z-index: -1
+    position: absolute
+
+    &:checked + span
+      img
+        display: block
+  > span
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 1.8rem
+    background: radial-gradient(50% 50% at 50% 50%, #2F3439 0%, #1F242B 100%)
+    border: 1px solid #272C32
+    border-radius: 3px
+    transition: all 0.3s ease
+    width: 1.8rem
+    position: relative
+    img
+      display: none
+
+.block-inventar
+  display: flex
+  flex-direction: column
+  flex: 1 1 auto
+  overflow: hidden
+  margin-bottom: 2rem
+
+
+
+
+.case
+  &-img
+    background: #161A1F url(../img/item-blue.svg) 50% 50% no-repeat
+    background-size: 80% auto
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      border-radius: 50%
+      display: block
+      width: 1px
+      height: 1px
+      box-shadow: 0 0 4rem 5rem rgba(24, 75, 255, 0.4)
+    &.red
+      background-image: url(../img/item-red.svg)
+      &:after
+        box-shadow: 0 0 4rem 5rem rgba(252,89,255, 0.4)
+    &.pink
+      background-image: url(../img/item-pink.svg)
+      &:after
+        box-shadow: 0 0 4rem 5rem rgba(255,18,32, 0.4)
+
+
+.b-game
+  display: flex
+  width: 100%
+  flex-direction: column;
+  position: relative
+  height: 38rem
+.game-bg
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+.m-col-7
+  display: flex
+  width: 66%
+  padding: 0 1rem
+
+.b-row-labels
+  position: relative
+  max-width: 46rem
+  overflow: hidden
+  width: 100%
+  margin: 2rem auto
+  z-index: 1
+  &:after
+    content: ""
+    top: 0
+    right: 0
+    width: 5rem
+    height: 100%
+    background: linear-gradient(to right, rgba(13,25,49,0) 0%,rgba(13,25,49,0) 33%,rgba(13,25,49,1) 100%)
+    position: absolute
+    overflow: hidden
+.graph-labels
+  white-space: nowrap
+
+.graph-label
+  display: inline-block
+  vertical-align: top
+  font-size: 1rem
+  color: #fff
+  text-transform: uppercase
+  border-radius: .3rem
+  padding: .5rem 1rem
+  margin-right: .8rem
+
+.game
+  &-timer
+    text-align: center
+    color: #fff
+    font-size: 3.2rem
+    z-index: 1
+    position: relative
+  &-static
+  &-rate
+    display: none

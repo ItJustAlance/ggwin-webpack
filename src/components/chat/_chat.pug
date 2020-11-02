@@ -1,0 +1,53 @@
+.chat
+  .chat-header
+    .chat-title
+      | Онлайн чат
+      .status.green
+        img(src='icons/png/i-online.png')
+        | 2333
+    a.specification(href="")
+      +svgMono('pravila')
+      | Правила
+    button.chat-close(type='button')
+      +svgMono('arr-right')
+    .chat-free
+      #noTrespassingOuterBarG
+        #noTrespassingFrontBarG.noTrespassingAnimationG
+          .noTrespassingBarLineG
+          .noTrespassingBarLineG
+          .noTrespassingBarLineG
+          .noTrespassingBarLineG
+          .noTrespassingBarLineG
+          .noTrespassingBarLineG
+      .chat-free__cont
+        .chat-free__title Бесплатный скин
+        .chat-free__timer 00:45:05
+        button.chat-free__arrow
+          +svgMono('arr-down')
+  // end chat-header
+  .chat-cont
+    ul.chat-list
+      +chatmessage('online')
+      +chatmessage('offline')
+      +chatmessage('online')
+      +chatmessage('offline')
+      +chatmessage('online')
+      +chatmessage('offline')
+      +chatmessage('online')
+      +chatmessage('offline')
+      +chatmessage('online')
+      +chatmessage('offline')
+      +chatmessage('online')
+      +chatmessage('offline')
+
+  // end chat-cont
+  .chat-bottom
+    .chat-form
+      .chat-form__inner
+        .field-wrapper
+          input#chat-input.field-textarea(type='text' placeholder='Введите сообщение' autocomplete='off' value='')
+        button.btn.btn--blue(type='button' disabled='')
+          +svgMono('i-submit')
+    // end chat-form
+    // end chat-bottom
+// end chat

@@ -1,0 +1,129 @@
+// main-about
+- var leftTabs = true;
+- var leftCrumbs = false;
+// include ../left-col/_left-column
+
+.wrapper-content
+  .sidebar-left
+    .block-gr.b-athorization
+      a(href="#") Авторизуйтесь, чтобы сделать ставку
+
+    .block-gr.block-inventar
+      .b-inventar
+        .inventar-title Выбрано
+        .inventar-top
+          .balance
+            img(src='img/valuta.svg')
+            .cost 21.54
+          .change
+            img(src='img/i-gun.svg')
+            .cost 34
+          .all-check
+            span.text Выбрать всё
+            label.checker(for='id1')
+              input#id1(type='checkbox')
+              span
+                img(src='img/galka.svg')
+        // end invertar-top
+        .inventar-cont
+          .inventar-list
+            .inventar-scroll
+              +invent('active', 'blue')
+              +invent('', 'red')
+              +invent('', 'pink')
+              +invent('', 'blue')
+              +invent('', 'blue')
+              +invent('', 'blue')
+
+            // end invent-scroll
+          // end inventar-list
+        // end inventar-cont
+        .inventar-bottom
+          button.btn.btn-exchange
+            +svgMono('i-market')
+            | Магазин
+          button.btn.btn-green.btn-dw
+            +svgMono('i-dw')
+        // end inventar-bottom
+        .inventar-locked(style='display:none')
+          .inventar-locked__center
+            .text
+              a(href='#') Авторизуйтесь
+              |  на сайте чтобы использовать
+            .b-btn
+              button.btn-steam
+                +svgMono('steam')
+                | Войти через Steam
+        // end inventar-locked
+        // end b-inventar
+  // end block
+
+
+  .content
+    .game-block
+      .m-col-7
+        .block-gr.b-game
+          .game-bg
+            img(src="img/game.png")
+          .b-row-labels
+            .graph-labels
+              a.graph-label(href='#' style='background: #C50D2C')
+                span 2.10x
+              a.graph-label(href='#' style='background: #A500A1')
+                span 2.10x
+              a.graph-label(href='#' style='background: #FF9900')
+                span 2.10x
+              a.graph-label(href='#' style='background: #A500A1')
+                span 2.10x
+              a.graph-label(href='#' style='background: #FF9900')
+                span 2.10x
+              a.graph-label(href='#' style='background: #A500A1')
+                span 2.10x
+              a.graph-label(href='#' style='background: #FF9900')
+                span 2.10x
+              a.graph-label(href='#' style='background: #A500A1')
+                span 2.10x
+              a.graph-label(href='#' style='background: #FF9900')
+                span 2.10x
+              a.graph-label(href='#' style='background: #22B56B')
+                span 2.10x
+              a.graph-label(href='#' style='background: #22B56B')
+                span 2.10x
+          .game-timer 09:20
+          .game-statics
+            .game-statics__player
+              .tit Игроки
+              .num 237
+            .game-statics__bank
+              .tit Банк
+              .num 2605
+            .game-statics__skins
+              .tit Скины
+              .num 2605
+            .game-statics__history
+              a.link-history(href="#") История
+      .m-col-4
+        .block-gr.game-info
+    .game-rate
+      .rate-list
+        .rate-item
+          .rate-item__top
+            .rate-item__name
+              .img
+              .name John Week
+            .rate-item__price 10222
+          .rate-item__cases
+            .case-img.blue
+              img(src="img/gun1.png")
+            .case-img.red
+              img(src="img/gun1.png")
+            .case-img.pink
+              img(src="img/gun1.png")
+            .case-img.blue
+              img(src="img/gun1.png")
+            .case-img.blue
+              img(src="img/gun1.png")
+
+
+.sidebar-right.chat-r
+  include ../chat/_chat
