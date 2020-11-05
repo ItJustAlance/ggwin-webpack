@@ -44,3 +44,55 @@ mixin invent(active, color)
         .key Sundown
   // end b-item
   // end invent-col
+
+mixin inventarMarket()
+  .inventar-market
+    .inventar-market--close
+      +svgMono('close')
+    .inventar-market__header
+      .title Магазин
+      .give
+        .tit Отдаете
+        .price
+          img(src="img/valuta.svg")
+          | 1760
+      .return
+        .tit Получаете
+        .price
+          img(src="img/valuta.svg")
+          | 1760
+    .inventar-market--filter
+      .b-search
+        input(type='text' placeholder='Поиск')
+      .b-cost
+        input(type='text' placeholder='Поиск')
+      .b-select-cost
+        .j-select
+          .j-select-value
+            +svgMono('arr-down')
+            | Цена
+          .j-select-drop
+            ul.j-select-drop--list
+              li
+                .ic
+                  +svgMono('filter-list')
+                span Цена
+              li
+                .ic
+                  +svgMono('filter-list')
+                span Популярность
+              li
+                .ic
+                  +svgMono('filter-list')
+                span Популярность
+    .inventar-list
+      .inventar-scroll
+        +invent('active', 'blue')
+        +invent('', 'red')
+        +invent('', 'pink')
+        +invent('', 'blue')
+        +invent('', 'blue')
+        +invent('', 'blue')
+        +invent('', 'blue')
+        +invent('', 'blue')
+        +invent('', 'blue')

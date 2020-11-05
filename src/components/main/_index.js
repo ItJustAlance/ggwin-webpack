@@ -2,7 +2,6 @@
 (function($, APP) {
   APP.Components.Slider = {
     init: function(fromPjax) {
-      
 
     },
   };

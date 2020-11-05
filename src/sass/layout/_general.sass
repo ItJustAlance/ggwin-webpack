@@ -45,19 +45,21 @@ svg
 input, textarea
   &::-webkit-input-placeholder
     opacity: 1 !important
-    color: rgba(48,48,48, 0.5)
+    color: #3B4042
 
   &:-moz-placeholder
     opacity: 1 !important
-    color: rgba(48,48,48, 0.5)
+    color: #3B4042
+  &::placeholder
+    color: #3B4042
 
   &::-moz-placeholder
     opacity: 1 !important
-    color: rgba(48,48,48, 0.5)
+    color: #3B4042
 
   &:-ms-input-placeholder
     opacity: 1 !important
-    color: rgba(48,48,48, 0.5)
+    color: #3B4042
 
 .clearfix
   *zoom: 1
@@ -78,7 +80,55 @@ input[type='submit']::-moz-focus-inner, button::-moz-focus-inner
 input, textarea, button
   font-family: $baseFont
   font-weight: bold
-  color: rgba(48,48,48, 1)
+  color: #fff
+
+input, textarea
+  background: #21252C
+  border: 1px solid #27292E
+  border-radius: .5rem
+  padding: 1rem
+  min-height: 4.8rem
+  width: 100%
+  font-size: 12px
+
+.j-select
+  color: #747A7C
+  position: relative
+  z-index: 5
+  &-value
+    background: #161A1F
+    border-radius: .5rem
+    align-items: center
+    display: flex
+    height: 4.8rem
+    padding: 0 3rem 0 1rem
+    overflow: hidden
+    .ico
+      position: absolute
+      top: 1.7rem
+      right: 1.5rem
+  &-drop
+    position: absolute
+    top: 100%
+    left: 0
+    margin-top: -1px
+    z-index: 10
+    width: 100%
+    &--list
+      background: #161A1F
+      width: 100%
+      border-radius: .5rem
+      margin-top: 1.2rem
+      li
+        padding: 1rem
+        width: 100%
+        cursor: pointer
+        &:hover
+          background: #21252C
+        .ic
+          display: inline-block
+          width: 3rem
+          margin-right: .5rem
 
 
 strong, b
@@ -173,12 +223,14 @@ body
   min-width: 38rem
   display: flex
   flex-direction: column
+  transition: all 0.3s ease
 
 .sidebar-right
   max-width: 32rem
   min-width: 32rem
   display: flex
   position: relative
+  transition: all 0.3s ease
   &.hide
     margin-right: -28rem
 .container
@@ -195,6 +247,12 @@ body
 .content
   flex: 1 1 auto
   width: 100%
+  display: flex
+  overflow: hidden
+  padding: 0 1rem
+  transition: all 0.3s ease
+  flex-direction: column
+  max-height: calc(100vh - 11rem)
 
 +r($sm)
   .container

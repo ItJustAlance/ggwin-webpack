@@ -97,11 +97,12 @@
   &-item
     background: #161A1F url(../img/item-blue.svg) 50% 50% no-repeat
     background-size: 60% auto
-    border: 1px solid #747A7C
+    border: 1px solid rgba(0,0,0,0)
     padding: 1.2rem
     border-radius: 5px
     position: relative
-
+    &.active
+      border: 1px solid #747A7C
     &:after
       content: ""
       position: absolute
@@ -214,7 +215,7 @@
         position: relative
 
   &-locked
-    max-height: 100%
+    height: 100%
     color: #747A7C
     text-align: center
     display: flex
@@ -229,7 +230,81 @@
         &:hover
           color: #fff
 
+  &-market
+    position: fixed
+    bottom: -100vh
+    left: 40rem
+    z-index: 5
+    background: #111217
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.53)
+    border: 1px solid #14161B
+    border-radius: .5rem .5rem 0 0
+    width: 100%
+    padding: 2rem
+    max-width: 55rem
+    max-height: 95vh
 
+    &__header
+      display: flex
+      align-items: center
+      padding-bottom: 2rem
+      .title
+        color: #fff
+        font-size: 20px
+        margin-right: 3rem
+        text-transform: uppercase
+      .tit
+        color: #747A7C
+        font-size: 12px
+        padding-bottom: .7rem
+        text-transform: uppercase
+      .give
+        margin-right: 3rem
+      .price
+        display: inline-flex
+        align-items: center
+        img
+          width: 2.1rem
+          height: 2.1rem
+          margin-right: .8rem
+    &--filter
+      margin: 0 -1rem
+      display: flex
+      .b-search
+        padding: 0 1rem
+        width: 30%
+      .b-cost
+        width: 25%
+        padding: 0 1rem
+      .b-select-cost
+        width: 45%
+        padding: 0 1rem
+    &--close
+      position: absolute
+      top: 2rem
+      right: 2rem
+      svg
+        width: 1.4rem
+        height: 1.4rem
+
+    .inventar
+      &-list
+        max-height: 85vh
+        height: 40rem
+        margin: 0
+        padding-top: 2rem
+      &-scroll
+        position: relative
+        left: 0
+        right: 0
+        max-height: 100%
+      &-col
+        width: 33.3%
+
+.market-show
+  .inventar-market
+    bottom: 0
+    transition: all 0.3s ease
 
 .checker
   position: absolute
@@ -263,7 +338,7 @@
   flex-direction: column
   flex: 1 1 auto
   overflow: hidden
-  margin-bottom: 2rem
+  margin-bottom: 0
 
 
 
@@ -271,8 +346,11 @@
 .case
   &-img
     background: #161A1F url(../img/item-blue.svg) 50% 50% no-repeat
-    background-size: 80% auto
+    background-size: 75% auto
     position: relative
+    img
+      position: relative
+      z-index: 2
     &:after
       content: ""
       position: absolute
@@ -282,15 +360,15 @@
       display: block
       width: 1px
       height: 1px
-      box-shadow: 0 0 4rem 5rem rgba(24, 75, 255, 0.4)
+      box-shadow: 0 0 2rem 2rem rgba(24, 75, 255, 0.4)
     &.red
       background-image: url(../img/item-red.svg)
       &:after
-        box-shadow: 0 0 4rem 5rem rgba(252,89,255, 0.4)
+        box-shadow: 0 0 2rem 2rem rgba(252,89,255, 0.4)
     &.pink
       background-image: url(../img/item-pink.svg)
       &:after
-        box-shadow: 0 0 4rem 5rem rgba(255,18,32, 0.4)
+        box-shadow: 0 0 2rem 2rem rgba(255,18,32, 0.4)
 
 
 .b-game
@@ -298,7 +376,7 @@
   width: 100%
   flex-direction: column;
   position: relative
-  height: 38rem
+  min-height: 38rem
 .game-bg
   position: absolute
   top: 0
@@ -307,6 +385,10 @@
 .m-col-7
   display: flex
   width: 66%
+  padding: 0 1rem
+.m-col-5
+  display: flex
+  width: 34%
   padding: 0 1rem
 
 .b-row-labels
@@ -339,12 +421,348 @@
   margin-right: .8rem
 
 .game
+  &-block
+    display: flex
+
   &-timer
     text-align: center
     color: #fff
     font-size: 3.2rem
     z-index: 1
     position: relative
-  &-static
+  &-statics
+    z-index: 1
+    position: absolute
+    bottom: 2rem
+    left: 2rem
+    right: 2rem
+    display: flex
+    &__player
+      background: url(../img/players.svg) 0 50% no-repeat
+      background-size: contain
+      padding-left: 4rem
+      margin-right: 2rem
+    &__bank
+      background: url(../img/valuta.svg) 0 50% no-repeat
+      background-size: contain
+      padding-left: 4rem
+      margin-right: 2rem
+    &__skins
+      background: url(../img/i-gun.svg) 0 50% no-repeat
+      background-size: contain
+      padding-left: 4rem
+    &__history
+      background: url(../img/i-history.svg) 0 50% no-repeat
+      background-size: contain
+      padding: .9rem 0 .9rem 4rem
+      font-size: 12px
+      text-transform: uppercase
+      position: absolute
+      top: .5rem
+      right: 0
+      .link-history
+        color: #3B4042
+        &:hover
+          color: #fff
+
+    .tit
+      color: #747A7C
+      font-size: 1rem
+      text-transform: uppercase
+    .num
+      color: #fff
+      font-size: 1.4rem
+      letter-spacing: 0.15em
+
+
+
   &-rate
-    display: none
+    padding: 0 1rem
+    flex: 1 1 auto
+    overflow: hidden
+    display: flex
+
+  &-info
+    width: 100%
+    padding: 2rem
+    &__title
+      color: #747A7C
+      padding-bottom: 14px
+      font-size: 12px
+    &__koef-row
+      margin: 0 -1rem 2rem
+      display: flex
+      align-items: center
+
+      .b-enter
+        width: auto
+        flex: 1 1 auto
+        padding: 0 1rem
+        input
+          background: #21252C
+          border: 1px solid #27292E
+          border-radius: .5rem
+          height: 4.8rem
+          padding: 1rem
+          width: 100%
+      .b-edit
+        width: auto
+        padding: 0 1rem
+        .edit
+          color: #3B4042
+          font-size: 12px
+          padding: 0 1rem
+          background: none
+          border: none
+          cursor: pointer
+          text-transform: uppercase
+          white-space: nowrap
+          &:hover
+            color: #fff
+          svg
+            width: 1.5rem
+            height: 1.5rem
+            margin-right: 1rem
+            top: .2rem
+            position: relative
+    &__check_koef
+      list-style: none
+      margin: 0 -.5rem 2rem
+      padding: 0 0 2rem
+      display: flex
+      border-bottom: 1px solid #212126
+      li
+        width: 20%
+        padding: 0 .5rem
+        button
+          background: radial-gradient(50% 50% at 50% 50%, #2F3439 0%, #1F242B 100%)
+          border: 1px solid #272C32
+          border-radius: .5rem
+          cursor: pointer
+          color: #747A7C
+          font-size: 12px
+          text-align: center
+          padding: 1.5rem 0
+          width: 100%
+        button.active
+          background: radial-gradient(50% 50% at 50% 50%, #FF8000 0%, #FF4A00 100%)
+          color: #fff
+          border: 1px solid #FF7A00
+
+    &__cols
+      margin: 0 -1rem
+      padding: 1.3rem 0
+      background: url(../img/fast-forward.svg) 50% 50% no-repeat
+      background-size: contain
+      display: flex
+      align-items: center
+      justify-content: space-between
+      .title
+        font-size: 12px
+        text-transform: uppercase
+        color: #747A7C
+        padding-bottom: .2rem
+    &__rate
+      width: 12rem
+      text-align: center
+      padding: 1rem 0
+      .rate-text
+        display: inline-block
+        vertical-align: top
+        background: url(../img/valuta.svg) 0 0 no-repeat
+        padding: .3rem 0 .2rem 3rem
+        background-size: contain
+        font-size: 1.6rem
+    &__wins
+      width: 12rem
+      text-align: center
+      background: url(../img/stars-win.svg) 50% 100% no-repeat
+      position: relative
+      z-index: 1
+      padding: 1rem 0
+
+      &:after
+        content: ""
+        width: 100%
+        height: 100%
+        background: url(../img/win-stars.png) 50% 100% no-repeat
+        background-size: contain
+        top: 0
+        left: 0
+        z-index: -1
+        position: absolute
+      .wins-text
+        display: inline-block
+        vertical-align: top
+        font-size: 1.6rem
+        background: url(../img/valuta.svg) 0 0 no-repeat
+        padding: .3rem 0 .2rem 3rem
+        background-size: contain
+    &__bottom
+      padding-top: 2rem
+      .btn
+        width: 100%
+
+
+.rate
+  &-list
+    display: flex
+    flex-wrap: wrap
+    background: #111217
+    border: 1px solid #14161B
+    border-radius: .5rem
+    overflow: auto
+    flex: 1 1 auto
+  &-cont
+    background: #15181D
+    padding: 1.2rem 1.2rem .2rem
+    border-radius: .5rem
+    min-height: 100%
+    display: flex
+    flex-direction: column
+  &-num
+    font-size: 1.4rem
+    color: #28FFBC
+    position: absolute
+    top: 1.1rem
+    left: 1rem
+  &-result
+    font-size: 1.6rem
+    color: #fff
+    background: url(../img/valuta.svg) 0 50% no-repeat
+    background-size: auto 100%
+    padding-left: 2.7rem
+    top: 4.1rem
+    left: 1rem
+    position: absolute
+  &-icon-loose
+    width: 4rem
+    height: 4rem
+    top: calc(50% - 2rem)
+    right: 2rem
+    position: absolute
+    svg
+      width: 4rem
+      height: 4rem
+  &-item
+    padding: 1rem
+    width: 33.3%
+    .case-img
+      width: 20%
+    &__top
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &__name
+      display: inline-flex
+      align-items: center
+      font-size: 1.6rem
+      color: #fff
+      .img
+        width: 4.8rem
+        height: 4.8rem
+        margin-right: 1.2rem
+    &__price
+      background: url(../img/valuta.svg) 0 50% no-repeat
+      background-size: auto 100%
+      padding-left: 2.7rem
+    &__cases
+      display: flex
+      overflow: hidden
+      margin-top: 1rem
+      &--status
+        border-top: 1px solid #212126
+        position: relative
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        margin: 0 -1rem
+        border-radius: .5rem
+        flex: 1 1 auto
+        min-height: 7rem
+        &:after, &:before
+          content: ""
+          width: 2rem
+          height: 2rem
+          position: absolute
+          top: -1rem
+          left: -1.1rem
+          background: #111217
+          border-radius: 50%
+          z-index: 1
+        &:before
+          left: auto
+          right: -1.1rem
+        &.win
+          .win-bg
+            background: url(../img/green-graf.png) 0 0 no-repeat
+            background-size: auto 100%
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            border-radius: .5rem
+            &:after
+              content: ""
+              width: 100%
+              height: 100%
+              background: linear-gradient(270deg, rgba(0, 57, 50, 0.15) 41.67%, #006F4A 105%)
+              top: 0
+              left: 0
+              position: absolute
+              border-radius: .5rem
+        &.lost
+          .lost-bg
+            background: url(../img/red-graf.png) 0 0 no-repeat
+            background-size: auto 100%
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            &:after
+              content: ""
+              width: 100%
+              height: 100%
+              background: linear-gradient(90deg, #86161D -1.25%, rgba(179, 27, 36, 0.15) 66.81%)
+              top: 0
+              left: 0
+              position: absolute
+              border-radius: .5rem
+        .waiting
+          background: #21252C
+          text-align: center
+          border-radius: 5px
+          height: 4.8rem
+          display: flex
+          align-items: center
+          justify-content: center
+          color: #747A7C
+          text-transform: uppercase
+          width: calc(100% - 2rem)
+          margin: 1.2rem 1rem 0
+          svg
+            width: 2.4rem
+            height: 2.4rem
+.lost
+  .rate
+    &-num
+      color: #FF767E
+    &-result
+      background: none
+      padding-left: 0
+
+
+::-webkit-scrollbar
+  width: 8px
+
+::-webkit-scrollbar-track
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+  border-radius: 3px
+  background: #212126
+
+::-webkit-scrollbar-thumb
+  border-radius: 3px
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5)
+  background: linear-gradient(270deg, #FF8000 -114.43%, #FF4A00 100%)

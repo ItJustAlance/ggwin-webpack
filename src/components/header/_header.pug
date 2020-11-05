@@ -56,16 +56,30 @@ header.header
               | Бонусы
 
     .header__float
-      .header__steam
-        if aut == true
-          .header__login
-            .header__login-ava
-              img(src="img/ava.png")
-            .header__login--right
-              a.header__login--nick(href="#") DENDAKTHEBEST
-              a.login-exit(href="#")
-                 +svgMono('exit')
-        else
+      if aut == true
+        .header__change-money
+          button.active
+            img(src="img/valuta.svg")
+          button
+            img(src="img/i-rub.svg")
+        .header--balance
+          img(src="img/valuta.svg")
+          | 1704
+        .header__up-balance
+          button.btn.btn-green Пополнить
+        .header__login
+          .header__login-ava
+            img(src="img/ava.png")
+            .i-lvl 1 lvl
+          .header__login--right
+            a.header__login--nick(href="#") DENDAKTHEBEST
+            a.login-exit(href="#")
+              +svgMono('i-exit')
+              | Выйти
+        a.login-soc(href="#")
+          +svgMono('i-vk')
+      else
+        .header__steam
           a.btn-steam(href="#")
             +svgMono('steam')
             | Войти через Steam

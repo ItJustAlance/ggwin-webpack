@@ -1,4 +1,8 @@
 .chat
+  .chat-open
+    span
+      +svgMono('arr-right')
+      | Открыть чат
   .chat-header
     .chat-title
       | Онлайн чат
@@ -25,6 +29,63 @@
         button.chat-free__arrow
           +svgMono('arr-down')
   // end chat-header
+  .free-skin-info
+    .free-skin-prize
+      .free-skin-img
+        img(src="img/gun1.png")
+      .free-skin-name Famas
+      .free-skin-case Sundown
+    .free-skin-text
+      h3 Розыгрыш каждый час
+      .text Чтобы попасть в список самых активных и поучаствовать в розыгрыше, нужно
+      ul.list-ico
+        li
+          +svgColor('free-ic1')
+          | Активность в чате
+        li
+          +svgColor('free-ic2')
+          | Активность в ставках
+        li
+          +svgColor('free-ic3')
+          | Сыграть больше 10 игр
+    .users-win
+      .title Последние победители
+      .user
+        .ava
+          span
+            img(src="img/ava.png")
+        .right
+          .name John Week
+          .time
+            +svgMono('time-win')
+            | 11:50
+        .inventar-item
+          span
+            img(src='img/gun1.png' alt='')
+      .user
+        .ava
+          span
+            img(src="img/ava.png")
+        .right
+          .name John Week
+          .time
+            +svgMono('time-win')
+            | 11:50
+        .inventar-item
+          span
+            img(src='img/gun1.png' alt='')
+      .user
+        .ava
+          span
+            img(src="img/ava.png")
+        .right
+          .name John Week
+          .time
+            +svgMono('time-win')
+            | 11:50
+        .inventar-item
+          span
+            img(src='img/gun1.png' alt='')
   .chat-cont
     ul.chat-list
       +chatmessage('online')

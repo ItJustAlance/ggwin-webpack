@@ -9,43 +9,48 @@
       a(href="#") Авторизуйтесь, чтобы сделать ставку
 
     .block-gr.block-inventar
-      .b-inventar
-        .inventar-title Выбрано
-        .inventar-top
-          .balance
-            img(src='img/valuta.svg')
-            .cost 21.54
-          .change
-            img(src='img/i-gun.svg')
-            .cost 34
-          .all-check
-            span.text Выбрать всё
-            label.checker(for='id1')
-              input#id1(type='checkbox')
-              span
-                img(src='img/galka.svg')
-        // end invertar-top
-        .inventar-cont
-          .inventar-list
-            .inventar-scroll
-              +invent('active', 'blue')
-              +invent('', 'red')
-              +invent('', 'pink')
-              +invent('', 'blue')
-              +invent('', 'blue')
-              +invent('', 'blue')
 
-            // end invent-scroll
-          // end inventar-list
-        // end inventar-cont
-        .inventar-bottom
-          button.btn.btn-exchange
-            +svgMono('i-market')
-            | Магазин
-          button.btn.btn-green.btn-dw
-            +svgMono('i-dw')
-        // end inventar-bottom
-        .inventar-locked(style='display:none')
+      if aut == true
+        .b-inventar
+          .inventar-title Выбрано
+          .inventar-top
+            .balance
+              img(src='img/valuta.svg')
+              .cost 21.54
+            .change
+              img(src='img/i-gun.svg')
+              .cost 34
+            .all-check
+              span.text Выбрать всё
+              label.checker(for='id1')
+                input#id1(type='checkbox')
+                span
+                  img(src='img/galka.svg')
+          // end invertar-top
+          .inventar-cont
+            .inventar-list
+              .inventar-scroll
+                +invent('active', 'blue')
+                +invent('', 'red')
+                +invent('', 'pink')
+                +invent('', 'blue')
+                +invent('', 'blue')
+                +invent('', 'blue')
+
+              // end invent-scroll
+            // end inventar-list
+          // end inventar-cont
+          .inventar-bottom
+            button.btn.btn-exchange.js-open-market
+              +svgMono('i-market')
+              | Магазин
+            button.btn.btn-green.btn-dw
+              +svgMono('i-dw')
+          // end inventar-bottom
+          +inventarMarket()
+        // end b-inventar
+      else
+        .inventar-locked
           .inventar-locked__center
             .text
               a(href='#') Авторизуйтесь
@@ -55,7 +60,6 @@
                 +svgMono('steam')
                 | Войти через Steam
         // end inventar-locked
-        // end b-inventar
   // end block
 
 
@@ -102,28 +106,213 @@
               .num 2605
             .game-statics__history
               a.link-history(href="#") История
-      .m-col-4
+      .m-col-5
         .block-gr.game-info
+          .game-info__title Авто-вывод
+          .game-info__koef-row
+            .b-enter
+              input(type="text" placeholder="Введите КФ")
+            .b-edit
+              button.edit
+                +svgMono('i-setting')
+                | Изменить
+          ul.game-info__check_koef
+            li
+              button.active 1.1x
+            li
+              button 1.5x
+            li
+              button 2x
+            li
+              button 3x
+            li
+              button 5x
+          .game-info__cols
+            .game-info__rate
+              .title Ставка
+              .rate-text 1512
+            .game-info__wins
+              .title Выигрыш
+              .wins-text 1705
+          .game-info__bottom
+            button.btn Сделать ставку
     .game-rate
       .rate-list
         .rate-item
-          .rate-item__top
-            .rate-item__name
-              .img
-              .name John Week
-            .rate-item__price 10222
-          .rate-item__cases
-            .case-img.blue
-              img(src="img/gun1.png")
-            .case-img.red
-              img(src="img/gun1.png")
-            .case-img.pink
-              img(src="img/gun1.png")
-            .case-img.blue
-              img(src="img/gun1.png")
-            .case-img.blue
-              img(src="img/gun1.png")
+          .rate-cont
+            .rate-item__top
+              .rate-item__name
+                .img
+                  img(src="img/ava.png")
+                .name John Week
+              .rate-item__price 10222
+            .rate-item__cases
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.red
+                img(src="img/gun1.png")
+              .case-img.pink
+                img(src="img/gun1.png")
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.blue
+                img(src="img/gun1.png")
+            .rate-item__cases--status.waiting
+              .waiting
+                +svgMono('i-timer')
+                | Ставка В раунде
+        .rate-item
+          .rate-cont
+            .rate-item__top
+              .rate-item__name
+                .img
+                  img(src="img/ava.png")
+                .name John Week
+              .rate-item__price 10222
+            .rate-item__cases
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.red
+                img(src="img/gun1.png")
+              .case-img.pink
+                img(src="img/gun1.png")
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.blue
+                img(src="img/gun1.png")
+            .rate-item__cases--status.win
+              .win-bg
+              .rate-num 1.2X
+              .rate-result 2333
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.red
+                img(src="img/gun1.png")
+        .rate-item
+          .rate-cont
+            .rate-item__top
+              .rate-item__name
+                .img
+                  img(src="img/ava.png")
+                .name John Week
+              .rate-item__price 10222
+            .rate-item__cases
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.red
+                img(src="img/gun1.png")
+              .case-img.pink
+                img(src="img/gun1.png")
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.blue
+                img(src="img/gun1.png")
+            .rate-item__cases--status.waiting
+              .waiting
+                +svgMono('i-timer')
+                | Ставка В раунде
+        .rate-item
+          .rate-cont
+            .rate-item__top
+              .rate-item__name
+                .img
+                  img(src="img/ava.png")
+                .name John Week
+              .rate-item__price 10222
+            .rate-item__cases
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.red
+                img(src="img/gun1.png")
+              .case-img.pink
+                img(src="img/gun1.png")
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.blue
+                img(src="img/gun1.png")
+            .rate-item__cases--status.win
+              .win-bg
+              .rate-num 1.2X
+              .rate-result 2333
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.red
+                img(src="img/gun1.png")
+        .rate-item
+          .rate-cont
+            .rate-item__top
+              .rate-item__name
+                .img
+                  img(src="img/ava.png")
+                .name John Week
+              .rate-item__price 10222
+            .rate-item__cases
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.red
+                img(src="img/gun1.png")
+              .case-img.pink
+                img(src="img/gun1.png")
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.blue
+                img(src="img/gun1.png")
+            .rate-item__cases--status.waiting
+              .waiting
+                +svgMono('i-timer')
+                | Ставка В раунде
+        .rate-item
+          .rate-cont
+            .rate-item__top
+              .rate-item__name
+                .img
+                  img(src="img/ava.png")
+                .name John Week
+              .rate-item__price 10222
+            .rate-item__cases
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.red
+                img(src="img/gun1.png")
+              .case-img.pink
+                img(src="img/gun1.png")
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.blue
+                img(src="img/gun1.png")
+            .rate-item__cases--status.win
+              .win-bg
+              .rate-num 1.2X
+              .rate-result 2333
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.red
+                img(src="img/gun1.png")
 
-
+        .rate-item
+          .rate-cont
+            .rate-item__top
+              .rate-item__name
+                .img
+                  img(src="img/ava.png")
+                .name John Week
+              .rate-item__price 10222
+            .rate-item__cases
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.red
+                img(src="img/gun1.png")
+              .case-img.pink
+                img(src="img/gun1.png")
+              .case-img.blue
+                img(src="img/gun1.png")
+              .case-img.blue
+                img(src="img/gun1.png")
+            .rate-item__cases--status.lost
+              .lost-bg
+              .rate-num 1.2X
+              .rate-result Ставка не сыграла
+              .rate-icon-loose
+                +svgMono('loose')
 .sidebar-right.chat-r
   include ../chat/_chat
