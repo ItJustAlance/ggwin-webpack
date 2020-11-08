@@ -6,6 +6,10 @@ include _mix-header
 header.header
   .container
     .header-left
+      a#hamburger-icon
+        span.line.line-1
+        span.line.line-2
+        span.line.line-3
       .b-logo
         a.logo(to="/")
           img(src='img/logo.svg')
@@ -36,10 +40,7 @@ header.header
           button.btn-double.active
             img(src='img/h-casino.svg')
             | double
-      a#hamburger-icon
-        span.line.line-1
-        span.line.line-2
-        span.line.line-3
+
       nav.header__nav
         ul
           li.active
@@ -66,7 +67,10 @@ header.header
           img(src="img/valuta.svg")
           | 1704
         .header__up-balance
-          button.btn.btn-green Пополнить
+          button.btn.btn-green
+            span Пополнить
+            +svgMono('ico-pay')
+
         .header__login
           .header__login-ava
             img(src="img/ava.png")
@@ -85,3 +89,83 @@ header.header
             | Войти через Steam
           a.login-soc(href="#")
             +svgMono('i-vk')
+
+.header-toggle
+  .header-toggle__close
+    +svgMono('close')
+  .header-toggle__logo
+    a.logo(to="/")
+      img(src='img/logo.svg')
+  .header__login
+    .header__login-ava
+      img(src="img/ava.png")
+      .i-lvl 1 lvl
+    .header__login--right
+      a.header__login--nick(href="#") DENDAKTHEBEST
+      a.login-exit(href="#")
+        +svgMono('i-exit')
+        | Выйти
+  .header-toggle--money
+    .header--balance
+      img(src="img/valuta.svg")
+      | 1704
+    .header__change-money
+      button.active
+        img(src="img/valuta.svg")
+      button
+        img(src="img/i-rub.svg")
+  .header__up-balance
+    button.btn.btn-green
+      span Пополнить
+      +svgMono('ico-pay')
+
+  ul.header-toggle-nav
+    li.active
+      a(href="#")
+        +svgMono("i-info")
+        | FAQ
+    li
+      a(href="#")
+        +svgMono('i-support')
+        | Поддержка
+    li
+      a(href="#")
+        +svgMono('i-bonus')
+        | Бонусы
+
+  .header__lang
+    .header__lang--value
+      +svgColor('lang')
+      span RUS
+      +svgMono('arr-down', 'ico--arr-down')
+    .header__lang--list
+      ul
+        li
+          a(href='#')
+            span.ic
+              +svgColor('lang')
+            | ENG
+        li
+          a(href='#')
+            span.ic
+              +svgColor('lang')
+            | RUS
+  .header__icons--sound
+    +svgMono('mute')
+  .header-toggle-socs
+    a.login-soc(href="#")
+      +svgMono('i-vk')
+  .chat-free
+    #noTrespassingOuterBarG
+      #noTrespassingFrontBarG.noTrespassingAnimationG
+        .noTrespassingBarLineG
+        .noTrespassingBarLineG
+        .noTrespassingBarLineG
+        .noTrespassingBarLineG
+        .noTrespassingBarLineG
+        .noTrespassingBarLineG
+    .chat-free__cont
+      .chat-free__title Бесплатный скин
+      .chat-free__timer 00:45:05
+      button.chat-free__arrow
+        +svgMono('arr-down')

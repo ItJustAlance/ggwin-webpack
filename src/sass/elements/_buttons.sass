@@ -12,13 +12,15 @@ button
   position: relative
   text-align: center
   cursor: pointer
-
   color: #fff
   padding: 1.6rem 1.9rem
   background: #00BE7F
   background: radial-gradient(50% 50% at 50% 50%, #FF8000 0%, #FF4A00 100%)
   border-radius: .5rem
   border: 1px solid #FF7A00
+  +r($lg)
+    padding: 1.2rem 1.8rem
+    font-size: 1.2rem
   &:focus, &:active
     outline: none
   &:hover
@@ -54,3 +56,21 @@ button
       border: 1px solid #27292E
       .svg-icon
         fill: #fff
+
+.float-btn-chat
+  width: 4.8rem
+  height: 4.8rem
+  align-items: center
+  justify-content: center
+  bottom: 1rem
+  right: 1rem
+  z-index: 5
+  position: fixed
+  display: none
+  +r($lg)
+    display: flex
+  svg
+    min-width: 2rem
+    min-height: 2rem
+    max-width: 2rem
+    max-height: 2rem

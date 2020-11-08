@@ -96,3 +96,68 @@ mixin inventarMarket()
         +invent('', 'blue')
         +invent('', 'blue')
         +invent('', 'blue')
+    .inventar-enter
+      button.btn.btn-enter Подтвердить
+
+mixin free-skin-info()
+  .free-skin-info
+    .free-skin-close
+      +svgMono('close')
+    .free-skin-content
+      .free-skin-prize
+        .free-skin-img
+          img(src="img/gun1.png")
+        .free-skin-name Famas
+        .free-skin-case Sundown
+      .free-skin-text
+        h3 Розыгрыш каждый час
+        .text Чтобы попасть в список самых активных и поучаствовать в розыгрыше, нужно
+        ul.list-ico
+          li
+            img(src='img/free-ic1.svg')
+            | Активность в чате
+          li
+            img(src='img/free-ic2.svg')
+            | Активность в ставках
+          li
+            img(src='img/free-ic3.svg')
+            | Сыграть больше 10 игр
+      .users-win
+        .title Последние победители
+        .user
+          .ava
+            span
+              img(src="img/ava.png")
+          .right
+            .name John Week
+            .time
+              +svgMono('time-win')
+              | 11:50
+          .inventar-item
+            span
+              img(src='img/gun1.png' alt='')
+        .user
+          .ava
+            span
+              img(src="img/ava.png")
+          .right
+            .name John Week
+            .time
+              +svgMono('time-win')
+              | 11:50
+          .inventar-item
+            span
+              img(src='img/gun1.png' alt='')
+        .user
+          .ava
+            span
+              img(src="img/ava.png")
+          .right
+            .name John Week
+            .time
+              +svgMono('time-win')
+              | 11:50
+          .inventar-item
+            span
+              img(src='img/gun1.png' alt='')
+  // free-skin-info
