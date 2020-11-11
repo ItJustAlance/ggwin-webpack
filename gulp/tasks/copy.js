@@ -17,9 +17,9 @@ const copyTask = () => gulp.parallel(copyRootfiles, copyFonts, copyVideo, copyPh
 const watch = () => () => {
   gulp.watch(config.src.root + '/*.*', copyRootfiles);
   gulp.watch(config.src.fonts + '/*.{woff,woff2,ttf,eot,svg}', copyFonts);
-  gulp.watch(config.src.video + '/*.*', copyVideo);
-  gulp.watch(config.src.php + '/*.*', copyPhp);
-  gulp.watch(config.src.json + '/*.*', copyJson);
+  // gulp.watch(config.src.video + '/*.*', copyVideo);
+  // gulp.watch(config.src.php + '/*.*', copyPhp);
+  // gulp.watch(config.src.json + '/*.*', copyJson);
 };
 
 module.exports.build = copyTask;

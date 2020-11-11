@@ -46,11 +46,11 @@ const javascriptVendor = () =>
     .pipe(plumber({ errorHandler: config.errorHandler }))
     .pipe(webpackStream(webpackConfig))
     .pipe(concat('vendor.js'))
-    .pipe(
-      babel({
-        presets: ['@babel/preset-env'],
-      })
-    )
+    // .pipe(
+    //   babel({
+    //     presets: ['@babel/preset-env'],
+    //   })
+    // )
     .pipe(gulp.dest(config.dest.js));
 
 const javascriptApp = () =>
@@ -63,11 +63,11 @@ const javascriptApp = () =>
     ])
     .pipe(plumber({ errorHandler: config.errorHandler }))
     .pipe(concat('app.js'))
-    .pipe(
-      babel({
-        presets: ['@babel/preset-env'],
-      })
-    )
+    // .pipe(
+    //   babel({
+    //     presets: ['@babel/preset-env'],
+    //   })
+    // )
     .pipe(config.production ? uglifyJs() : util.noop())
     .pipe(gulp.dest(config.dest.js));
 

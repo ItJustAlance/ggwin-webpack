@@ -3,6 +3,7 @@ button
   -webkit-appearance: none
   border: 0
   box-shadow: none
+  background: none
   cursor: pointer
   &:focus
     outline: none
@@ -13,11 +14,12 @@ button
   text-align: center
   cursor: pointer
   color: #fff
-  padding: 1.6rem 1.9rem
+  padding: 1.52rem 1.8rem 1.5rem
   background: #00BE7F
   background: radial-gradient(50% 50% at 50% 50%, #FF8000 0%, #FF4A00 100%)
   border-radius: .5rem
   border: 1px solid #FF7A00
+  transition: all 0.3s ease
   +r($lg)
     padding: 1.2rem 1.8rem
     font-size: 1.2rem
@@ -26,7 +28,17 @@ button
   &:hover
     background: #FF7A00
     color: #fff
-
+    .ico
+      fill: #fff
+  &-bord
+    border: 1px solid #3B4042
+    border-radius: .5rem
+    color: #3B4042
+    background: none
+    padding: 1.4rem 1.6rem
+    &.orange
+      border: 1px solid #FF7A00
+      color: #fff
   &-green
     background: #00BE7F
     background: linear-gradient(180deg, #00BE7F 0%, #009261 100%)
@@ -45,6 +57,12 @@ button
     border: 1px solid #123B6A
     background: radial-gradient(77.12% 77.12% at 50% 50%, #055A8F 0%, #0C1E3D 100%)
     border-radius: 5px
+    +r($sm)
+      height: 3.4rem
+      font-size: 1.3rem
+      .ico
+        width: 1.9rem
+        height: 1.9rem
     .ico
       fill: #fff
       margin-right: 1rem
@@ -74,3 +92,10 @@ button
     min-height: 2rem
     max-width: 2rem
     max-height: 2rem
+
+.input
+  background: #21252C
+  color: #3B4042
+  font-size: 1.4rem
+  height: 4.8rem
+  border-radius: .5rem

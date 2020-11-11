@@ -76,7 +76,7 @@ header.header
             img(src="img/ava.png")
             .i-lvl 1 lvl
           .header__login--right
-            a.header__login--nick(href="#") DENDAKTHEBEST
+            a.header__login--nick(href="#") John Week
             a.login-exit(href="#")
               +svgMono('i-exit')
               | Выйти
@@ -96,76 +96,85 @@ header.header
   .header-toggle__logo
     a.logo(to="/")
       img(src='img/logo.svg')
-  .header__login
-    .header__login-ava
-      img(src="img/ava.png")
-      .i-lvl 1 lvl
-    .header__login--right
-      a.header__login--nick(href="#") DENDAKTHEBEST
-      a.login-exit(href="#")
-        +svgMono('i-exit')
-        | Выйти
-  .header-toggle--money
-    .header--balance
-      img(src="img/valuta.svg")
-      | 1704
-    .header__change-money
-      button.active
+  .header-toggle--cont
+    .header__login
+      .header__login-ava
+        img(src="img/ava.png")
+        .i-lvl 1 lvl
+      .header__login--right
+        a.header__login--nick(href="#") John Week
+        a.login-exit(href="#")
+          +svgMono('i-exit')
+          | Выйти
+    .header-toggle--money
+      .header--balance
         img(src="img/valuta.svg")
-      button
-        img(src="img/i-rub.svg")
-  .header__up-balance
-    button.btn.btn-green
-      span Пополнить
-      +svgMono('ico-pay')
+        | 1704
+      .header__change-money
+        button.active
+          img(src="img/valuta.svg")
+        button
+          img(src="img/i-rub.svg")
+    .header__up-balance
+      button.btn.btn-green
+        span Пополнить
+        +svgMono('ico-pay')
+    .double-check
+      button.btn-crash.active
+        img(src='img/crash.svg')
+        | Crash
+      button.btn-double.active
+        img(src='img/h-casino.svg')
+        | double
 
-  ul.header-toggle-nav
-    li.active
-      a(href="#")
-        +svgMono("i-info")
-        | FAQ
-    li
-      a(href="#")
-        +svgMono('i-support')
-        | Поддержка
-    li
-      a(href="#")
-        +svgMono('i-bonus')
-        | Бонусы
-
-  .header__lang
-    .header__lang--value
-      +svgColor('lang')
-      span RUS
-      +svgMono('arr-down', 'ico--arr-down')
-    .header__lang--list
-      ul
-        li
-          a(href='#')
-            span.ic
-              +svgColor('lang')
-            | ENG
-        li
-          a(href='#')
-            span.ic
-              +svgColor('lang')
-            | RUS
-  .header__icons--sound
-    +svgMono('mute')
-  .header-toggle-socs
-    a.login-soc(href="#")
-      +svgMono('i-vk')
-  .chat-free
-    #noTrespassingOuterBarG
-      #noTrespassingFrontBarG.noTrespassingAnimationG
-        .noTrespassingBarLineG
-        .noTrespassingBarLineG
-        .noTrespassingBarLineG
-        .noTrespassingBarLineG
-        .noTrespassingBarLineG
-        .noTrespassingBarLineG
-    .chat-free__cont
-      .chat-free__title Бесплатный скин
-      .chat-free__timer 00:45:05
-      button.chat-free__arrow
-        +svgMono('arr-down')
+    ul.header-toggle-nav
+      li.active
+        a(href="#")
+          +svgMono("i-info")
+          | FAQ
+      li
+        a(href="#")
+          +svgMono('i-support')
+          | Поддержка
+      li
+        a(href="#")
+          +svgMono('i-bonus')
+          | Бонусы
+    .header__menu-bottom
+      .header__menu-bottom-left
+        .header__lang
+          .header__lang--value
+            +svgColor('lang')
+            span RUS
+            +svgMono('arr-down', 'ico--arr-down')
+          .header__lang--list
+            ul
+              li
+                a(href='#')
+                  span.ic
+                    +svgColor('lang')
+                  | ENG
+              li
+                a(href='#')
+                  span.ic
+                    +svgColor('lang')
+                  | RUS
+        .header__icons--sound
+          +svgMono('mute')
+      .header-toggle-socs
+        a.login-soc(href="#")
+          +svgMono('i-vk')
+    .chat-free
+      #noTrespassingOuterBarG
+        #noTrespassingFrontBarG.noTrespassingAnimationG
+          .noTrespassingBarLineG
+          .noTrespassingBarLineG
+          .noTrespassingBarLineG
+          .noTrespassingBarLineG
+          .noTrespassingBarLineG
+          .noTrespassingBarLineG
+      .chat-free__cont
+        .chat-free__title Бесплатный скин
+        .chat-free__timer 00:45:05
+        button.chat-free__arrow
+          +svgMono('arr-down')

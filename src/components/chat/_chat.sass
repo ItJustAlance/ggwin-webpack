@@ -2,12 +2,16 @@
   .chat
     &-open
       right: -65px
+    +r($sm)
+      display: none
     &-r
       margin-right: -32.5rem
       right: -2rem
+
 .chat
   display: flex
   flex-direction: column
+  width: 100%
   max-width: 100%
   &-open
     background: radial-gradient(50% 50% at 50% 50%, #2F3439 0%, #1F242B 100%)
@@ -57,6 +61,17 @@
       padding-bottom: 0
       .chat-free
         display: none
+    +r($sm)
+      padding-top: 7rem
+      padding-left: 7rem
+      padding-right: 2rem
+      .chat-free
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        margin: 0
 
 
   &-title
@@ -102,6 +117,11 @@
     justify-content: center
     +r($lg)
       display: none
+    +r($sm)
+      display: inline-flex
+      top: 6.8rem
+      left: 1rem
+
 
     svg
       width: 1.5rem
@@ -130,9 +150,10 @@
   &-item
     display: flex
     width: 100%
-    max-width: 320px
+    max-width: 32rem
     padding: 1.5rem 2rem
-
+    +r($sm)
+      max-width: 100%
     &.offline
       .chat
         &-item
@@ -276,6 +297,8 @@
     +r($sm)
       position: relative
       top: 0
+      margin: 0 -2rem
+      width: auto
     &__cont
       position: relative
       display: flex
@@ -310,7 +333,10 @@
         fill: #fff
         width: 1.3rem
         height: .8rem
-
+        +r($lg)
+          transform: rotate(-90deg)
+        +r($sm)
+          transform: rotate(0)
 #noTrespassingOuterBarG
   height: 6rem
   width: 100%
@@ -348,18 +374,55 @@
 .float-chat__open
   .chat-r
     right: 0
-
+    +r($sm)
+      width: 100%
+      max-width: 100%
+    &:after
+      +r($lg)
+        content: ''
+        position: fixed
+        top: 0
+        right: 0
+        left: 0
+        height: 100%
+        z-index: -1
+        background: #191B21
+        opacity: .8
+      +r($sm)
+        display: none
 .free-skin__open
   .free-skin
     &-info
       opacity: 1
       max-height: calc(100vh - 22.5rem)
       right: 0
+      z-index: 11
       +r($lg)
         top: auto
         bottom: 0
         max-height: 100vh
         right: auto
+        &:after
+          content: ''
+          position: fixed
+          top: 0
+          right: 0
+          left: 0
+          height: 100%
+          z-index: -1
+          background: #191B21
+          opacity: .8
+          +r($sm)
+            display: none
+      +r($sm)
+        left: 0
+        z-index: 24
+        top: 6rem
+        width: 100%
+  .chat-free__arrow svg
+    transform: rotate(90deg)
+    +r($sm)
+      transform: rotate(180deg)
 .free-skin
   &-info
     background: #111217 url(../img/bg-prize.png) 50% 0 no-repeat
@@ -380,8 +443,14 @@
       max-height: 90vh
       height: 100vh
       top: auto
+      +r($sm)
+        top: 6rem
+        bottom: 0
+        left: -40rem
+        max-height: 100vh
   &-close
     display: none
+    z-index: 2
     +r($lg)
       display: block
       position: absolute
@@ -390,6 +459,8 @@
       svg
         width: 1.4rem
         height: 1.4rem
+    +r($sm)
+      display: none
   &-content
     overflow: auto
     position: absolute

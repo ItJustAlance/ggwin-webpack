@@ -2,7 +2,12 @@
   .header
     &-toggle
       left: 0
-
+      +r($sm)
+        width: 100%
+      &:after
+        display: block
+        +r($sm)
+          display: none
 .header
   background: #010101
   height: 9rem
@@ -29,6 +34,30 @@
     padding: 9.6rem 2rem 0
     background: #111217
     border: 1px solid #14161B
+    .header__up-balance
+      +r($sm)
+        .btn
+          height: 4.8rem
+    &--cont
+      overflow: auto
+      max-height: 100%
+      padding-bottom: 4rem
+      +r($sm)
+        overflow: visible
+        max-height: 9999em
+        padding-bottom: 0
+    &:after
+      content: ""
+      position: fixed
+      top: 0
+      left: 32rem
+      right: 0
+      height: 100%
+      z-index: -1
+      background: #191B21
+      opacity: .8
+      display: none
+
     +r($sm)
       overflow: auto
     &__close
@@ -52,11 +81,15 @@
           font-size: 1.4rem
       &--balance
         margin-left: 0
-
+        +r($sm)
+          .btn
+            min-height: 4.2rem
       &__lang
         display: inline-flex
+        background: #161A1F
       &__icons--sound
         display: inline-flex
+        background: #161A1F
       &__change
         &-money
           display: flex
@@ -67,18 +100,22 @@
         padding-top: 2rem
         padding-bottom: 3rem
         border-bottom: 1px solid #212126
+        +r($sm)
+          border: none
+
         .btn
           width: 100%
           .ico
             display: none
           +r($sm)
             span
-              display: none
+              display: block
             .ico
-              display: inline-block
+              display: none
     .login-exit
       color: #3B4042
       font-size: 1.2rem
+
       svg
         margin-top: .2rem
     &--money
@@ -90,6 +127,10 @@
       margin: 0 0 2rem
       padding: 0 0 2rem
       border-bottom: 1px solid #212126
+      +r($sm)
+        padding-bottom: 0
+        border: none
+        padding-top: 1rem
       li
         font-size: 1.4rem
         margin: 0
@@ -111,11 +152,21 @@
     &-socs
       padding-top: 3.4rem
       padding-bottom: 3.2rem
-
+      +r($sm)
+        display: inline-flex
+        padding: 0
+    +r($lg)
+      .double-check
+        display: none
+    +r($sm)
       .login-soc
         display: inline-flex
         margin-left: 0
-
+        padding: 0
+      .chat-free
+        display: none
+      .double-check
+        display: inline-flex
   &__float
     max-width: 50%
     flex: 1 1 auto
@@ -127,7 +178,7 @@
       max-width: 100%
 
   &__login
-    min-width: 16rem
+    min-width: 24.5rem
     display: flex
     align-items: center
     +r($lg)
@@ -157,10 +208,11 @@
       margin-right: 1.2rem
       position: relative
       .i-lvl
-        font-size: 10px
+        font-size: 1rem
         text-transform: uppercase
         bottom: -.6rem
         right: 0
+        white-space: nowrap
         color: #fff
         padding: .2rem .4rem
         border-radius: .3rem
@@ -170,8 +222,9 @@
     display: inline-flex
     align-items: center
     justify-content: center
-    text-transform: uppercase
+    text-transform: none
     color: #3B4042
+    font-size: 1.2rem
     &:hover
       color: #fff
       .ico
@@ -188,7 +241,7 @@
     justify-content: space-between
 
   .b-logo
-    width: 20rem
+    width: 22rem
     +r($lg)
       display: none
   .logo
@@ -234,6 +287,7 @@
     align-items: center
     vertical-align: top
     margin-right: 1.2rem
+    min-width: 10.7rem
     +r($lg)
       display: none
 
@@ -278,40 +332,7 @@
             max-width: 2rem
           img
             width: 1.5rem
-  .double-check
-    background: #161A1F
-    border-radius: 5px
-    display: flex
-    button
-      width: 11.5rem
-      height: 4.8rem
-      border-radius: 5px
-      color: #3B4042
-      display: inline-flex
-      align-items: center
-      background: #161A1F
-      padding: 0 1.3rem
-      font-size: 1.2rem
-      text-transform: uppercase
-      img
-        margin-right: 1.1rem
-        opacity: .5
-        width: 2.3rem
-        height: 1.9rem
-      &.btn-crash
-        &.active
-          background: radial-gradient(71.87% 71.87% at 50% 50%, #BC002D 24.48%, #3C0000 100%)
-          border: 1px solid #8A0A01
-          color: #fff
-          img
-            opacity: 1
-      &.btn-double
-        &.active
-          background: radial-gradient(71.87% 71.87% at 50% 50%, #034593 24.48%, #01003C 100%)
-          border: 1px solid #032781
-          color: #fff
-          svg
-            opacity: 1
+
   &__nav
     flex: 1 1 auto
     max-width: 40rem
@@ -329,7 +350,8 @@
         display: flex
         height: 10rem
         font-weight: bold
-        margin-right: 3rem
+        margin-right: 3.1rem
+        text-transform: uppercase
 
         a
           display: inline-flex
@@ -392,16 +414,60 @@
       vertical-align: middle
       max-height: 100%
   &__up-balance
-    .btn
-      width: 3.2rem
-      height: 3.2rem
-      padding: 0
+    text-transform: uppercase
+    .ico
+      display: none
     +r($sm)
+      .btn
+        width: 3.2rem
+        height: 3.2rem
+        padding: 0
+
+
       span
         display: none
       .ico
         display: inline-block
+  &__menu-bottom
+    +r($sm)
+      display: flex
+      justify-content: space-between
+      padding-bottom: 2rem
 
+.double-check
+  background: #161A1F
+  border-radius: 5px
+  display: flex
+  button
+    width: 11.5rem
+    height: 4.8rem
+    border-radius: 5px
+    color: #3B4042
+    display: inline-flex
+    align-items: center
+    background: #161A1F
+    padding: 0 1.3rem
+    font-size: 1.2rem
+    text-transform: uppercase
+    img
+      margin-right: 1.1rem
+      opacity: .5
+      width: 2.3rem
+      height: 1.9rem
+    &.btn-crash
+      &.active
+        background: radial-gradient(71.87% 71.87% at 50% 50%, #BC002D 24.48%, #3C0000 100%)
+        border: 1px solid #8A0A01
+        color: #fff
+        img
+          opacity: 1
+    &.btn-double
+      &.active
+        background: radial-gradient(71.87% 71.87% at 50% 50%, #034593 24.48%, #01003C 100%)
+        border: 1px solid #032781
+        color: #fff
+        svg
+          opacity: 1
 .login-soc
   display: flex
   justify-content: center
@@ -425,8 +491,8 @@
   z-index: 10
   line-height: 1
   position: absolute
-  top: 1.5rem
-  left: 2rem
+  top: 1.4rem
+  left: 1.2rem
   display: none
   color: #ADFF00
   +r($sm)

@@ -1,26 +1,40 @@
 .b-athorization
   width: 100%
   max-height: 38rem
-  height: 40vh
-  background-image: url(../img/auth.png)
+  min-height: 38rem
+  display: flex
+  flex-direction: column
   background-position: 50% 50%
   background-repeat: no-repeat
   background-size: auto 31rem
   text-align: center
+  align-items: center
+  justify-content: center
   +r($lg)
     background-size: auto 25rem
-    max-height: 26rem
-    height: 26rem
-  a
-    position: absolute
-    bottom: 1.5rem
-    left: calc(50% - 8.5rem)
+    max-height: 28rem
+    height: 28rem
+    min-height: 28rem
+  &-img
+    max-height: 24rem
+    svg
+      width: 18rem
+      height: 18rem
+    img
+      max-width: 100%
+      max-height: 100%
+      height: 100%
+  .aut-text
+    position: relative
+    bottom: 0
+    left: 0
     display: block
     color: #747A7C
-    margin: 0 auto
-    width: 17rem
-    &:hover
-      color: #fff
+    margin: 2rem auto 0
+    width: 26rem
+    max-width: 80%
+  a.aut-text:hover
+    color: #fff
 
 
 .b-inventar
@@ -77,6 +91,9 @@
         position: absolute
         top: 1rem
         right: 1rem
+      +r($sm)
+        top: 1.8rem
+        right: 1.2rem
       .text
         margin-top: 0
         +r($lg)
@@ -107,7 +124,8 @@
     flex: 1 1 auto
     position: relative
     height: 100%
-
+    +r($sm)
+      height: auto
   &-col
     display: block
     width: 50%
@@ -201,7 +219,7 @@
       position: relative
       text-align: center
       +r($lg)
-        font-size: 1rem
+        font-size: 1.1rem
 
     .name
       color: #fff
@@ -214,7 +232,7 @@
       color: #747A7C
       white-space: nowrap
       +r($lg)
-        font-size: 1rem
+        font-size: 1.1rem
 
   &-bottom
     display: flex
@@ -293,6 +311,8 @@
     max-height: 95vh
     +r($lg)
       left: 27rem
+    +r($sm)
+      padding: 1rem
     &__header
       display: flex
       align-items: center
@@ -335,12 +355,18 @@
       .b-search
         padding: 0 1rem
         width: 30%
+        +r($sm)
+          padding: 0 .5rem
       .b-cost
         width: 25%
         padding: 0 1rem
+        +r($sm)
+          padding: 0 .5rem
       .b-select-cost
         width: 45%
         padding: 0 1rem
+        +r($sm)
+          padding: 0 .5rem
     &--close
       position: absolute
       top: 2rem
@@ -356,6 +382,8 @@
         height: 40rem
         margin: 0
         padding-top: 2rem
+        +r($lg)
+          height: calc(85vh - 11rem)
       &-scroll
         position: relative
         left: 0
@@ -365,6 +393,8 @@
         width: 33.3%
         +r($lg)
           width: 25%
+        +r($sm)
+          width: 50%
       &-enter
         display: none
         width: 100%
@@ -376,7 +406,8 @@
   .inventar-market
     bottom: 0
     transition: all 0.3s ease
-
+    +r($sm)
+      left: 0
 .checker
   position: absolute
   top: -.2rem
@@ -410,13 +441,18 @@
   flex: 1 1 auto
   overflow: hidden
   margin-bottom: 0
-
+  +r($sm)
+    margin: 0 .5rem
+  &.block-sm
+    +r($sm)
+      min-height: 40rem
+      display: block !important
 
 
 
 .case
   &-img
-    background: #161A1F url(../img/item-blue.svg) 50% 50% no-repeat
+    background: url(../img/item-blue.svg) 50% 50% no-repeat
     background-size: 75% auto
     position: relative
     img
@@ -450,22 +486,31 @@
   min-height: 38rem
   +r($lg)
     min-height: 23rem
+  +r($sm)
+    border: none
+    width: auto
+    min-width: 100%
+
 .game-bg
   position: absolute
   top: 0
   left: 0
   height: 100%
+  overflow: hidden
 .m-col-7
   display: flex
-  width: 66%
+  width: 68%
   padding: 0 1rem
   +r($lg)
     padding: 0 .5rem
   +r($sm)
-    width: 100%
+    width: auto
+    margin: 0 -.5rem 1rem
+    padding: 0
+
 .m-col-5
   display: flex
-  width: 34%
+  width: 32%
   padding: 0 1rem
   +r($lg)
     padding: 0 .5rem
@@ -478,6 +523,8 @@
   width: 100%
   margin: 2rem auto
   z-index: 1
+  +r($sm)
+    max-width: 50vw
   &:after
     content: ""
     top: 0
@@ -505,6 +552,7 @@
     display: flex
     +r($sm)
       flex-wrap: wrap
+      flex-direction: column
   &-timer
     text-align: center
     color: #fff
@@ -526,45 +574,49 @@
       bottom: 1rem
       justify-content: space-between
     &__player
-      background: url(../img/players.svg) 0 50% no-repeat
-      background-size: contain
+      background: url(../img/players.svg) 0 10% no-repeat
+      background-size: 3.2rem auto
       padding-left: 4rem
-      margin-right: 2rem
+      margin-right: 3.2rem
     &__bank
       background: url(../img/valuta.svg) 0 50% no-repeat
-      background-size: contain
+      background-size: 3.2rem auto
       padding-left: 4rem
-      margin-right: 2rem
+      margin-right: 4rem
     &__skins
       background: url(../img/i-gun.svg) 0 50% no-repeat
-      background-size: contain
-      padding-left: 4rem
+      background-size: 3.1rem auto
+      padding-left: 5rem
     &__history
-      background: url(../img/i-history.svg) 0 50% no-repeat
-      background-size: contain
-      padding: .7rem 0 .9rem 3.8rem
-      font-size: 12px
+
+      padding: .6rem 0 .9rem 0
+      font-size: 1.2rem
       text-transform: uppercase
       position: absolute
       top: .2rem
       right: 0
-      +r($sm)
+      +r($lg)
         display: none
       .link-history
         color: #3B4042
+        svg
+          height: 2.8rem
+          margin-right: 1rem
+          vertical-align: middle
         &:hover
           color: #fff
+          svg
+            fill: #fff
 
     .tit
       color: #747A7C
       font-size: 1rem
+      padding-bottom: .1rem
       text-transform: uppercase
     .num
       color: #fff
       font-size: 1.4rem
       letter-spacing: 0.15em
-
-
 
   &-rate
     padding: 0 1rem
@@ -577,9 +629,12 @@
       padding: 0
   &-info
     width: 100%
-    padding: 2rem
+    padding: 1.6rem 2rem 1.4rem
+    min-height: 28rem
     +r($lg)
       padding: 1rem
+    +r($sm)
+      min-height: 15rem
     &__title
       color: #747A7C
       padding-bottom: 1.4rem
@@ -607,13 +662,18 @@
           +r($lg)
             height: 4rem
             padding: .5rem 1rem
+          +r($sm)
+            height: 4.4rem
       .b-edit
-        width: auto
+        width: 50%
+        text-align: center
         padding: 0 1rem
         +r($lg)
           position: absolute
           top: .6rem
           right: 0
+        +r($sm)
+          width: auto
         .edit
           color: #3B4042
           font-size: 1.2rem
@@ -643,6 +703,9 @@
       +r($lg)
         margin-bottom: .5rem
         padding-bottom: 1rem
+      +r($sm)
+        border-bottom: none
+        margin-bottom: 0
       li
         width: 20%
         padding: 0 .5rem
@@ -658,30 +721,35 @@
           color: #747A7C
           font-size: 1.2rem
           text-align: center
-          padding: 1.5rem 0
+          padding: 1.7rem 0
           width: 100%
           +r($lg)
             padding: 1rem
+          +r($lg)
+            padding: 1.4rem 1rem
         button.active
           background: radial-gradient(50% 50% at 50% 50%, #FF8000 0%, #FF4A00 100%)
           color: #fff
           border: 1px solid #FF7A00
 
     &__cols
-      margin: 0 -1rem
+      margin: 0rem -1rem .5rem
       padding: 0
       background: url(../img/fast-forward.svg) 50% 50% no-repeat
-      background-size: contain
+      background-size: auto
       display: flex
       align-items: center
       justify-content: space-between
       +r($lg)
         background-size: auto 2.3rem
+      +r($sm)
+        display: none
       .title
         font-size: 1.2rem
         text-transform: uppercase
         color: #747A7C
-        padding-bottom: .2rem
+        padding-top: 1.1rem
+        padding-bottom: .4rem
         +r($lg)
           font-size: 1rem
           padding-bottom: .3rem
@@ -732,6 +800,13 @@
         padding-top: 1rem
       .btn
         width: 100%
+        font-size: 1.2rem
+        padding: 2.1rem 0
+        text-transform: uppercase
+        +r($lg)
+          padding: 1.2rem 0
+        +r($sm)
+          padding: 1.5rem 0 1.4rem
 
 
 .rate
@@ -743,12 +818,14 @@
     border-radius: .5rem
     overflow: auto
     flex: 1 1 auto
+    padding: 1rem
     +r($lg)
-      padding: .5rem
-    +r($lg)
+      padding: .5rem 1rem
+    +r($sm)
       border: none
-      padding: 0
+      padding: 0 1rem
       background: none
+
   &-cont
     background: #15181D
     padding: 1.2rem 1.2rem .2rem
@@ -757,13 +834,23 @@
     display: flex
     flex-direction: column
     +r($lg)
-      paddig: 1rem 1rem .1rem
+      padding: 1rem 1rem .1rem
+
+    +r($sm)
+      padding: 0
+      flex-direction: row
   &-num
     font-size: 1.4rem
     color: #28FFBC
     position: absolute
     top: 1.1rem
     left: 1rem
+    +r($sm)
+      position: relative
+      left: 0
+      top: 0
+      order: 1
+      padding-right: 1rem
   &-result
     font-size: 1.6rem
     color: #fff
@@ -773,6 +860,12 @@
     top: 4.1rem
     left: 1rem
     position: absolute
+    +r($sm)
+      position: relative
+      left: 0
+      top: 0
+      padding-right: 1rem
+
   &-icon-loose
     width: 4rem
     height: 4rem
@@ -790,14 +883,19 @@
       width: 50%
     +r($sm)
       width: 100%
+      padding: .5rem 0
     .case-img
       width: 20%
+      +r($sm)
+        display: none
     &__top
       display: flex
       justify-content: space-between
       align-items: center
       +r($sm)
         justify-content: flex-start
+        width: auto
+        padding-left: 1rem
     &__name
       display: inline-flex
       align-items: center
@@ -816,10 +914,13 @@
           width: 4rem
           height: 4rem
           margin-right: 1rem
+          +r($sm)
+            width: 3.6rem
+            height: 3.6rem
     &__price
       background: url(../img/valuta.svg) 0 50% no-repeat
       background-size: auto 100%
-      padding-left: 2.7rem
+      padding: .1rem 0 .2rem 2.7rem
     &__cases
       display: flex
       overflow: hidden
@@ -838,7 +939,9 @@
         min-height: 7rem
         +r($sm)
           border: none
-
+          margin: 0
+          min-height: 6rem
+          flex-direction: row
         &:after, &:before
           content: ""
           width: 2rem
@@ -849,19 +952,24 @@
           background: #111217
           border-radius: 50%
           z-index: 1
+          +r($sm)
+            display: none
         &:before
           left: auto
           right: -1.1rem
         &.win
           .win-bg
             background: url(../img/green-graf.png) 0 0 no-repeat
-            background-size: auto 100%
+            background-size: auto 100% !important
             position: absolute
             top: 0
             left: 0
             width: 100%
             height: 100%
             border-radius: .5rem
+            +r($sm)
+              background: url(../img/green-graf2.png) 100% 0 no-repeat
+              opacity: .8
             &:after
               content: ""
               width: 100%
@@ -871,15 +979,22 @@
               left: 0
               position: absolute
               border-radius: .5rem
+              +r($sm)
+                background: linear-gradient(90deg, rgba(0, 57, 50, 0.15) 52.47%, #006F4A 102.53%)
         &.lost
+          +r($sm)
+            .rate-result
+              display: none
           .lost-bg
             background: url(../img/red-graf.png) 0 0 no-repeat
-            background-size: auto 100%
+            background-size: auto 100% !important
             position: absolute
             top: 0
             left: 0
             width: 100%
             height: 100%
+            +r($sm)
+              background: url(../img/red-graf2.png) 100% 0 no-repeat
             &:after
               content: ""
               width: 100%
@@ -889,6 +1004,8 @@
               left: 0
               position: absolute
               border-radius: .5rem
+              +r($sm)
+                background: linear-gradient(90deg, rgba(255, 18, 32, 0) 28.96%, #D1222D 104.65%)
         .waiting
           background: #21252C
           text-align: center
@@ -901,6 +1018,16 @@
           text-transform: uppercase
           width: calc(100% - 2rem)
           margin: 1.2rem 1rem 0
+          position: relative
+          +r($sm)
+            background: none
+            text-align: left
+            text-indent: -999em
+            display: block
+            svg
+              position: absolute
+              top: .8rem
+              right: 0
           svg
             width: 2.4rem
             height: 2.4rem
@@ -908,6 +1035,7 @@
   .rate
     &-num
       color: #FF767E
+
     &-result
       background: none
       padding-left: 0
@@ -915,13 +1043,19 @@
 
 ::-webkit-scrollbar
   width: 8px
-
+  +r($lg)
+    width: 0
 ::-webkit-scrollbar-track
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
   border-radius: 3px
   background: #212126
-
+  +r($lg)
+    background: none
+    box-shadow: none
 ::-webkit-scrollbar-thumb
   border-radius: 3px
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5)
   background: linear-gradient(270deg, #FF8000 -114.43%, #FF4A00 100%)
+  +r($lg)
+    box-shadow: none
+    background: none

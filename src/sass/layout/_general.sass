@@ -151,6 +151,9 @@ i, em
 table p
   padding: 0 !important
 
+table
+  border-collapse: collapse
+  border-spacing: 0
 
 
 .nicescroll-cursors
@@ -162,6 +165,8 @@ html
     font-size: 1vw
   +r($sm)
     font-size: 2.5vw
+
+
 // FOUC like fix (prevent transition from default browser values)
 body:not(.is-ready)
   padding: 0
@@ -221,9 +226,11 @@ body
   display: flex
   flex: 1 1 auto
   padding-top: 2rem
+  overflow: hidden
   +r($lg)
     position: relative
-
+  +r($sm)
+    padding-top: 0
 .block-gr
   background: #111217
   border: 1px solid #14161B
@@ -235,14 +242,25 @@ body
 .wrapper-content
   flex: 1 1 auto
   display: flex
+  padding-left: 2.1rem
   +r($lg)
     max-width: 100%
+    padding-left: 1.2rem
+  +r($sm)
+    padding-left: 0
 .sidebar-left
   max-width: 38rem
   min-width: 38rem
   display: flex
   flex-direction: column
   transition: all 0.3s ease
+  &__lk
+    max-width: 32rem
+    min-width: 32rem
+    overflow: auto
+    background: #111217
+    padding: 0 2rem
+    border-radius: .5rem
   +r($lg)
     max-width: 26rem
     min-width: 26rem
@@ -266,9 +284,14 @@ body
   padding-left: 15px
   padding-right: 15px
 
+.block-sm
+  display: none !important
+  +r($sm)
+    display: block
 .ico
   width: 1.9rem
   height: 1.3rem
+
 .content
   flex: 1 1 auto
   width: 100%

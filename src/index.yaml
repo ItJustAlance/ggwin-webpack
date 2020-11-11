@@ -5,3 +5,17 @@ PageList:
     ready: 100
   - file: main-page-autorization.html
     ready: 100
+  - file: double-win.html
+    ready: 100
+  - file: double-win2.html
+    ready: 100
+  - file: referal.html
+    ready: 100
+  - file: lk-inventar.html
+    ready: 100
+  - file: lk-crash.html
+    ready: 100
+  - file: pop-popolnit.html
+    ready: 100
+  - file: promocode.html
+    ready: 100
