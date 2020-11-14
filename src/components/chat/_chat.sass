@@ -214,11 +214,10 @@
     max-width: calc(100% - 4.2rem)
     border-bottom: 1px solid #27292E
 
-
   &-bottom
-    padding-top: 1rem
-    +r($lg)
-      padding-bottom: 1rem
+    padding-top: 2rem
+    padding-bottom: 2rem
+
   &-form__inner
     position: relative
     display: -webkit-box
@@ -235,15 +234,15 @@
       margin-right: 4.5rem
 
       .field-textarea
-        font-size: 1.5rem
+        font-size: 1.2rem
         font-weight: 500
-        background: rgba(255,255,255, .1)
-        border-radius: 5px
+        background: #21252C
+        border-radius: .5rem
         color: #fff
         width: 100%
         padding: 1rem
         border: none
-        height: 5rem
+        height: 4.8rem
 
         &:-webkit-input-placeholder,
         &::-webkit-input-placeholder,
@@ -269,13 +268,12 @@
     height: 4.8rem
     width: 4.8rem
     cursor: pointer
-    background: radial-gradient(50% 50% at 50% 50%, #FF8000 0%, #FF4A00 100%)
-    border-radius: 5px
+    border-radius: .5rem
     position: absolute
     padding: 0
-    border: 1px solid #FF7A00
-    bottom: 1px
+    bottom: 0
     right: 2rem
+
     svg
       position: absolute
       width: 2.5rem
@@ -341,7 +339,8 @@
   height: 6rem
   width: 100%
   overflow: hidden
-  // background-color: linear-gradient(90deg, #FF4A00 0%, #FF6800 100%)
+  // background-color: #fe6910
+  background-color: linear-gradient(90deg, #FF4A00 0%, #FF6800 100%)
   position: absolute
   top: 0
   left: 0
@@ -351,13 +350,13 @@
   float: left
   width: 2rem
   height: 24rem
-  margin-right: 4.1rem
-  margin-top: -5.6rem
+  margin-right: 4rem
+  margin-top: -5rem
   transform: rotate(45deg)
 
 
 .noTrespassingAnimationG
-  width: 100%
+  width: 150%
   animation-name: noTrespassingAnimationG
   animation-duration: 1.5s
   animation-iteration-count: infinite
@@ -366,10 +365,10 @@
 
 @keyframes noTrespassingAnimationG
   0%
-    margin-left: 0
+    margin-left: -7rem
 
   100%
-    margin-left: -6rem
+    margin-left: -13.1rem
 
 .float-chat__open
   .chat-r

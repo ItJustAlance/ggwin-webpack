@@ -262,3 +262,48 @@ mixin table-crash__row-td()
         img(src="img/valuta.svg")
         | 2015
     .table-crash__td.table-crash__date 17:04, 15.12.2020
+
+
+mixin history-column()
+  .history-column
+    .history-item
+      .history-item__top
+        .history-item__num #740949
+        .history-item__date
+          +svgMono('time')
+          span 11:50
+      ul.history-item__icons
+        li
+          .history-item__icon
+            +svgMono('players')
+          .history-item__right
+            .title Игроки
+            | 237
+        li
+          .history-item__icon
+            img.ico(src="img/i-gun.svg")
+          .history-item__right
+            .title Скины
+            | 23
+        li
+          .history-item__icon
+            img.ico(src="img/valuta.svg")
+          .history-item__right
+            .title Банк
+            | 2 650
+        li
+          .history-item__rate
+            span.bg-green 4.73x
+
+
+mixin b-ticket(status)
+  li(class="b-ticket " + status)
+    .b-ticket__row
+      .b-ticket__col.title Капец что случилось
+      .b-ticket__col.status Новое сообщение
+    .b-ticket__row
+      .b-ticket__col.message
+        .ava
+          img(src="img/ava.png")
+        .text Вчера зашел в аккаунт и что-то ужасное чего раньше зашел в аккаунт и что-то ужасное чего раньше
+      .b-ticket__col.date 11:34

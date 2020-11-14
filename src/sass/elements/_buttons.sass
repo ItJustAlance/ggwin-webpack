@@ -19,7 +19,7 @@ button
   background: radial-gradient(50% 50% at 50% 50%, #FF8000 0%, #FF4A00 100%)
   border-radius: .5rem
   border: 1px solid #FF7A00
-  transition: all 0.3s ease
+  transition: color 0.3s ease
   +r($lg)
     padding: 1.2rem 1.8rem
     font-size: 1.2rem
@@ -30,6 +30,8 @@ button
     color: #fff
     .ico
       fill: #fff
+  &--full
+    width: 100%
   &-bord
     border: 1px solid #3B4042
     border-radius: .5rem
@@ -39,6 +41,18 @@ button
     &.orange
       border: 1px solid #FF7A00
       color: #fff
+    &.blue
+      color: #4A76A8
+      border-color: #4A76A8
+      &:hover
+        color: #fff
+        border-color: #FF7A00
+    &.red
+      color: #E73B27
+      border-color: #E73B27
+      &:hover
+        color: #fff
+        border-color: #FF7A00
   &-green
     background: #00BE7F
     background: linear-gradient(180deg, #00BE7F 0%, #009261 100%)
