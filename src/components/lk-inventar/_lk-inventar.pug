@@ -1,0 +1,138 @@
+.wrapper-content
+  .sidebar-left.sidebar-left__lk
+    .lk-user
+      .lk-user__ava
+        img(src="img/ava-big.png")
+      .lk-user__nick John Week
+      .lk-user__lvl
+        span 1 lvl
+      .lk-user__btn
+        button.btn.btn-bord Редактировать профиль
+    .lk-referal
+      .referal-result
+        .referal-result__title Рефералы
+        .referal-result__lvl
+          .referal-result__progress
+            <svg class="referal-result__svg" width="182" height="182" viewBox="0 0 182 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M182 91C182 141.258 141.258 182 91 182C40.7421 182 0 141.258 0 91C0 40.7421 40.7421 0 91 0C141.258 0 182 40.7421 182 91ZM13.65 91C13.65 133.719 48.2808 168.35 91 168.35C133.719 168.35 168.35 133.719 168.35 91C168.35 48.2808 133.719 13.65 91 13.65C48.2808 13.65 13.65 48.2808 13.65 91Z" fill="#21262C"/>
+            </svg>
+          .lvl 2 LvL
+        .referal-result__prices
+          span.referal-result__price1
+            img(src="img/valuta.svg")
+            | 21,50
+          | /
+          span.referal-result__price2
+            img(src="img/valuta.svg")
+            | 25,50
+        .referal-result__next-level до уровня 2
+        .referal-result__btn-more
+          button.btn.btn-bord.orange Подробнее
+    .register-date Регистрация 15.12.2020
+
+  .content
+    .lk-content
+      .status-game__icons
+        .status-game-item
+          .status-game-icon
+            .b-icon
+              span
+                img(src="img/stat-game1.png")
+            .title Сыграно игр
+            .desc 12
+        .status-game-item
+          .status-game-icon
+            .b-icon
+              span
+                img(src="img/stat-game2.png")
+            .title Побед
+            .desc 6
+        .status-game-item
+          .status-game-icon
+            .b-icon
+              span
+                img(src="img/stat-game3.png")
+            .title Винрейт
+            .desc 6%
+        .status-game-item
+          .status-game-icon
+            .b-icon
+              span
+                img(src="img/stat-game4.png")
+            .title Сумма выигрышей
+            .desc 3542 <img src="img/valuta.svg">
+        .status-game-item
+          .status-game-icon
+            .b-icon
+              span
+                img(src="img/stat-game5.png")
+            .title Топ выигрыш
+            .desc 23
+        .status-game-item
+          .status-game-icon
+            .b-icon
+              span
+                img(src="img/stat-game6.png")
+            .title Топ коэффициент
+            .desc 12
+      .link-trade
+        .link-trade__up
+          .link-trade-title
+            | Ссылка на трейд
+            span.ico-i
+              +svgMono('vop')
+          a.link-trade-edit(href="#")
+            +svgMono('i-setting')
+            | Изменить
+        .link-trade__bottom
+          .link-trade__input
+            input.input(type="text")
+          .link-trade__btn
+            button.btn Сохранить
+      .b-trade
+        .b-trade__tabs
+          ul
+            li.active
+              button
+                +svgMono('tab-inv')
+                span Инвентарь
+            li
+              button
+                +svgMono('tab-crash')
+                span Crash
+            li
+              button
+                +svgMono('tab-spot')
+                span Spots
+        .b-trade__box
+          .b-trade__list-inventar
+            +invent('active', 'blue')
+            +invent('', 'red')
+            +invent('', 'pink')
+            +invent('', 'blue')
+            +invent('active', 'blue')
+            +invent('', 'red')
+            +invent('', 'pink')
+            +invent('', 'blue')
+            +invent('active', 'blue')
+            +invent('', 'red')
+            +invent('', 'pink')
+            +invent('', 'blue')
+            +invent('active', 'blue')
+            +invent('', 'red')
+            +invent('', 'pink')
+            +invent('', 'blue')
+            +invent('active', 'blue')
+            +invent('', 'red')
+            +invent('', 'pink')
+            +invent('', 'blue')
+
+
+.sidebar-right.chat-r
+  include ../chat/_chat
+
+button.btn.float-btn-chat
+  +svgMono('btn-float-chat')
++inventarMarket()
++free-skin-info()
+

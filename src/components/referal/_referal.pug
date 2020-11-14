@@ -1,0 +1,185 @@
+.wrapper-content
+  .block-gr.block-referal
+    ul.crumb
+      li
+        a(href="#") Профиль
+        +svgMono('arr-down')
+      li
+        span Реферальная программа
+    .referal-scroll
+      .referal-left
+        .referal-stat__full
+          .referal-stat
+            .referal-result
+              .referal-result__title Рефералы
+              .referal-result__lvl
+                .referal-result__progress
+                  <svg class="referal-result__svg" width="182" height="182" viewBox="0 0 182 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M182 91C182 141.258 141.258 182 91 182C40.7421 182 0 141.258 0 91C0 40.7421 40.7421 0 91 0C141.258 0 182 40.7421 182 91ZM13.65 91C13.65 133.719 48.2808 168.35 91 168.35C133.719 168.35 168.35 133.719 168.35 91C168.35 48.2808 133.719 13.65 91 13.65C48.2808 13.65 13.65 48.2808 13.65 91Z" fill="#21262C"/>
+                  </svg>
+
+                .lvl 2 LvL
+              .referal-result__prices
+                span.referal-result__price1
+                  img(src="img/valuta.svg")
+                  | 21,50
+                | /
+                span.referal-result__price2
+                  img(src="img/valuta.svg")
+                  | 25,50
+              .referal-result__next-level до уровня 3
+          .referal-statistic__right
+            .referal-statistic__graf
+              .referal-statistic__graf-icons
+                .referal-statistic__graf__icon
+                  img(src="img/ico-stat-graf2.svg")
+                .referal-statistic__graf__title Приглашено
+                .referal-statistic__graf__num 12
+              .referal-statistic__graf-icons
+                .referal-statistic__graf__icon
+                  img(src="img/ico-stat-graf1.svg")
+                .referal-statistic__graf__title Бонус
+                .referal-statistic__graf__num 1%
+            .referal-promo
+              .referal-promo__title Промокод
+              .referal-promo__row
+                .referal-promo__code bf212jsala4
+                button.referal-promo__copy
+                  +svgMono('file-copy')
+            .referal-promo
+              .referal-promo__title Ссылка
+              .referal-promo__row
+                .referal-promo__code bf212jsala4
+                button.referal-promo__copy
+                  +svgMono('file-copy')
+        .referal-availbale
+          .referal-availbale__left
+            .referal-availbale__left-title Доступно
+            .referal-availbale__left-price
+              img(src="img/valuta.svg")
+              | 43453
+          .referal-availbale__input
+            input.input(type="text" placeholder="Введите сумму вывода")
+          .referal-availbale__submit
+            button.submit
+              +svgMono('ico-bank-money')
+          .referal-availbale__info Минимальный баланс <br>доступный для вывода — 13$
+        .referal-toggle
+          .referal-toggle__title
+            .referal-toggle__title-icon
+              +svgMono('book')
+            .referal-toggle__title-name Условия перехода на другие планы
+            .referal-toggle__title-arr
+              +svgMono('arr-down')
+          .referal-toggle__cont
+      .referal-right
+        .b-level
+          .b-level__me
+            .b-level__me-title Уровни
+            .b-level__me-right
+              .b-level__me-text Ваш уровень
+              .b-level__me-status
+                span Standart
+        .b-level__change
+          .b-level__change-section
+            button.b-level__change-section__button.b-level__change-section__button--active
+              +svgMono('section1')
+              | Standart
+          .b-level__change-section
+            button.b-level__change-section__button
+              +svgMono('section2')
+              | VIP
+          .b-level__change-section
+            button.b-level__change-section__button
+              +svgMono('section3')
+              | Блогер
+        .b-level__table
+          table.table-level
+            tr
+              th Уровень
+              th Депозитов
+              th Ваш бонус
+              th Реф. Бонус
+            tr
+              td
+                .table-level__level
+                  span 5
+                  | уровень
+              td
+                .table-level__depo
+                  img(src="img/valuta.svg")
+                  | 24234
+              td
+                .table-level__bonus 5%
+              td
+                .table-level__ref-bonus
+                  span 5%
+                  | к депозиту
+            tr.table-level--active
+              td
+                .table-level__level
+                  span 5
+                  | уровень
+              td
+                .table-level__depo
+                  img(src="img/valuta.svg")
+                  | 24234
+              td
+                .table-level__bonus 5%
+              td
+                .table-level__ref-bonus
+                  span 5%
+                  | к депозиту
+            tr
+              td
+                .table-level__level
+                  span 5
+                  | уровень
+              td
+                .table-level__depo
+                  img(src="img/valuta.svg")
+                  | 24234
+              td
+                .table-level__bonus 5%
+              td
+                .table-level__ref-bonus
+                  span 5%
+                  | к депозиту
+            tr
+              td
+                .table-level__level
+                  span 5
+                  | уровень
+              td
+                .table-level__depo
+                  img(src="img/valuta.svg")
+                  | 24234
+              td
+                .table-level__bonus 5%
+              td
+                .table-level__ref-bonus
+                  span 5%
+                  | к депозиту
+            tr
+              td
+                .table-level__level
+                  span 5
+                  | уровень
+              td
+                .table-level__depo
+                  img(src="img/valuta.svg")
+                  | 24234
+              td
+                .table-level__bonus 5%
+              td
+                .table-level__ref-bonus
+                  span 5%
+                  | к депозиту
+.sidebar-right.chat-r
+  include ../chat/_chat
+
+button.btn.float-btn-chat
+  +svgMono('btn-float-chat')
++inventarMarket()
++free-skin-info()
+

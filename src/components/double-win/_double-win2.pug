@@ -1,0 +1,145 @@
+
+.wrapper-content
+  .sidebar-left
+    .block-gr.b-choese
+      .b-choese__title Выберите коэффициент
+      .b-choese__img
+        img.ico(src='img/baraban.svg' alt='')
+        .rate 3X
+      ul.b-choese__rates
+        li
+          button.bord-red 2X
+        li
+          button.bord-blue 3X
+        li
+          button.bord-green 5X
+        li
+          button.bord-purple.active 50X
+      .b-choese__btn
+        button.btn Сделать ставку
+    .block-gr.block-inventar
+      if aut == true
+        .b-inventar
+          .inventar-title Выбрано
+          .inventar-top
+            .balance
+              img(src='img/valuta.svg')
+              .cost 21.54
+            .change
+              img(src='img/i-gun.svg')
+              .cost 34
+            .all-check
+              span.text Выбрать всё
+              label.checker(for='id2')
+                input#id2(type='checkbox')
+                span
+                  img(src='img/galka.svg')
+          // end invertar-top
+          .inventar-cont
+            .inventar-list
+              .inventar-scroll
+                +invent('active', 'blue')
+                +invent('', 'red')
+                +invent('', 'pink')
+                +invent('', 'blue')
+                +invent('', 'blue')
+                +invent('', 'blue')
+
+              // end invent-scroll
+            // end inventar-list
+          // end inventar-cont
+          .inventar-bottom
+            button.btn.btn-exchange.js-open-market
+              +svgMono('i-market')
+              | Магазин
+            button.btn.btn-green.btn-dw
+              +svgMono('i-dw')
+          // end inventar-bottom
+        // end b-inventar
+      else
+        .inventar-locked
+          .inventar-locked__center
+            .text
+              a(href='#') Авторизуйтесь
+              |  на сайте чтобы использовать
+            .b-btn
+              button.btn-steam
+                +svgMono('steam')
+                | Войти через Steam
+        // end inventar-locked
+  // end block
+
+
+  .content
+    .game-koleso
+      .game-koleso__koleso
+        img(src="img/koleso.svg")
+        .game-koleso__winner Победитель
+        .game-koleso__rate
+          span 3X
+      .game-koleso__secur
+        +svgMono('security')
+        | Победитель определяется через сервис random.org
+
+    .rate-listings
+      .rate-listings__scroll
+        .rate-listings__cont
+          .rate-listings__col
+            .rate-listings__wrap.rate-listings--red
+              .rate-listings__header
+                .rate-listings__rate Ставка 2X
+                .rate-listings__summa
+                  img(src="img/valuta.svg")
+                  | 1704
+              +rate-listings__items()
+              .rate-listings__bottom
+                | Еще 13 на
+                span.price
+                  img(src="img/valuta.svg")
+                  | 1704
+          .rate-listings__col
+            .rate-listings__wrap.rate-listings--purple
+              .rate-listings__header
+                .rate-listings__rate
+                  | Ставка 2X
+                  +svgColor('crown')
+                .rate-listings__summa
+                  img(src="img/valuta.svg")
+                  | 1704
+              +rate-listings__items()
+              .rate-listings__bottom
+                | Еще 13 на
+                span.price
+                  img(src="img/valuta.svg")
+                  | 1704
+          .rate-listings__col
+            .rate-listings__wrap.rate-listings--blue
+              .rate-listings__header
+                .rate-listings__rate Ставка 2X
+                .rate-listings__summa
+                  img(src="img/valuta.svg")
+                  | 1704
+              +rate-listings__items()
+              .rate-listings__bottom
+                | Еще 13 на
+                span.price
+                  img(src="img/valuta.svg")
+                  | 1704
+          .rate-listings__col
+            .rate-listings__wrap.rate-listings--green
+              .rate-listings__header
+                .rate-listings__rate Ставка 50X
+                .rate-listings__summa
+                  img(src="img/valuta.svg")
+                  | 0
+              .rate-listings__clear
+                +svgMono('user-box')
+                span Ставок нет
+.sidebar-right.chat-r
+  include ../chat/_chat
+
+button.btn.float-btn-chat
+  +svgMono('btn-float-chat')
++inventarMarket()
++free-skin-info()
+

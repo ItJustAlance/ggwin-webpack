@@ -1,0 +1,241 @@
+.block-support
+  width: 100%
+  padding: 1.5rem 2rem
+  display: flex
+  flex-direction: column
+  margin-right: 2rem
+  margin-bottom: 0
+  overflow: hidden
+  background: #111217
+  border: 1px solid #14161B
+  border-radius: .5rem
+  color: #747A7C
+  font-size: 1.4rem
+  &__up
+    margin-bottom: 2rem
+    .h1-title
+      padding-bottom: 0
+    .block-support
+      &-50
+        align-items: center
+        justify-content: space-between
+    .btn--create-ticket
+      width: 27rem
+    .btn--lock
+      padding-left: 30px
+      padding-right: 30px
+      .ico
+        width: 2.4rem
+        height: 2.4rem
+        vertical-align: middle
+        margin-right: 1rem
+        top: -.1rem
+        position: relative
+  &__row
+    display: flex
+    margin: 0 -1rem
+    flex: 1 1 auto
+  &-50
+    min-width: 50%
+    max-width: 50%
+    padding: 0 1rem
+    display: flex
+  &__content
+    flex: 1 1 auto
+    overflow: hidden
+    position: relative
+    display: flex
+  &__bottom
+    border-top: 1px solid #212126
+    padding-top: 2rem
+    padding-bottom: rem
+    display: flex
+    margin-top: .8rem
+    justify-content: space-between
+    .btn
+      text-transform: uppercase
+      padding: 1.2rem 2rem
+      margin-left: 1.2rem
+      font-size: 1.2rem
+      min-width: 15.2rem
+      .ico
+        width: 2.4rem
+        height: 2.4rem
+        vertical-align: middle
+        margin-right: .7rem
+        margin-top: -.1rem
+    &-left
+      .title
+        color: #fff
+        padding-bottom: .2rem
+      .mess
+        color: #747A7C
+        font-size: 1.4rem
+.list-ticket
+  overflow: auto
+  flex: 1 1 auto
+.list-ticket__scroll
+  max-width: 100%
+  overflow: hidden
+  display: flex
+  flex: 1 1 auto
+
+.b-ticket-me
+  font-size: 1.4rem
+  .title
+    color: #fff
+    padding-bottom: .3rem
+  .mess
+
+
+.b-ticket
+  background: #161A1F
+  border: 1px solid #1B1B1F
+  border-radius: .5rem
+  padding: 2rem 2rem .5rem
+  margin-bottom: 2rem
+  &.t-new
+    .status
+      color: #00EC9D
+      &:after
+        background: #00EC9D
+  &.t-wait
+    .status
+      color: #FAC300
+      &:after
+        background: #FAC300
+  &.t-close
+  &:hover, &.active
+    .message
+      color: #fff
+
+  &__row
+    display: flex
+    justify-content: space-between
+    margin: 0 -1rem 1.5rem
+
+  &__col
+    padding: 0 1rem
+  .title
+    font-size: 1.6rem
+    color: #fff
+    flex: 1 1 auto
+    overflow: hidden
+    white-space: nowrap
+    margin-right: 1rem
+    text-overflow: ellipsis
+  .status
+    color: #3B4042
+    margin-top: .2rem
+    padding-top: .2rem
+    font-size: 1.2rem
+    position: relative
+    padding-right: 2.8rem
+    text-transform: uppercase
+    margin-right: 1rem
+    &:after
+      content: ""
+      background: #3B4042
+      width: 1.8rem
+      height: 1.8rem
+      position: absolute
+      top: 0
+      right: 0
+      border-radius: 50%
+  .message
+    display: flex
+    max-width: calc(100% - 8rem)
+    overflow: hidden
+    position: relative
+  .ava
+    max-width: 2.4rem
+    min-width: 2.4rem
+    img
+      max-width: 2.4rem
+      min-width: 2.4rem
+  .text
+    flex: 1 1 auto
+    margin-left: 1rem
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+.chat-support
+  flex: 1 1 auto
+  overflow: hidden
+  display: flex
+  &__messages
+    overflow: auto
+    flex: 1 1 auto
+  &__message
+
+  &__row
+    display: flex
+    width: 100%
+    margin-bottom: 2rem
+    &__me
+      flex-direction: row-reverse
+      .chat-support
+        &__right
+          text-align: right
+        &__ava
+          margin-right: 0
+          margin-left: 1rem
+        &__text
+          background: #006FA2
+          border: 1px solid #0F90C9
+          text-align: right
+        &__time
+          text-align: left
+  &__ava
+    min-width: 4.8rem
+    max-width: 4.8rem
+    height: 4.8rem
+    margin-right: 1rem
+
+  &__right
+    flex: 1 1 auto
+
+  &__inline
+    display: inline-block
+    vertical-align: top
+    position: relative
+    text-align: right
+  &__text
+    background: #E97600
+    border: 1px solid #F3960B
+    border-radius: .5rem
+    display: inline-block
+    color: #fff
+    padding: 1.5rem 1.9rem
+    vertical-align: top
+    text-align: left
+  &__nick
+    padding-bottom: .9rem
+    font-size: 1.6rem
+    color: #fff
+    text-align: left
+  &__time
+    padding-top: .9rem
+    color: #3B4042
+    font-size: 1.4rem
+  &__bottom
+    display: flex
+    margin-top: 2rem
+  &__btn
+    .btn-chat-support
+      padding: 0
+      width: 4.8rem
+      height: 4.8rem
+    .ico
+      width: 2.4rem
+      height: 2.4rem
+  &__input
+    flex: 1 1 auto
+    margin-right: 1rem
+    .input
+
+
+
+
+

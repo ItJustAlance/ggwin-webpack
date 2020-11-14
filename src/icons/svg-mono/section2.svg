@@ -1,0 +1,29 @@
+<svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.634 4.32L16.083 2.334H13.021L12 0L10.979 2.334H7.91699L10.366 4.32L9.55099 7L12 5.159L14.449 7L13.634 4.32Z" fill="url(#paint0_radial)"/>
+<path d="M23.083 8.334H20.021L19 6L17.979 8.334H14.917L17.366 10.32L16.551 13L19 11.159L21.449 13L20.634 10.32L23.083 8.334Z" fill="url(#paint1_radial)"/>
+<path d="M4.99999 11.159L7.44899 13L6.63399 10.32L9.08299 8.334H6.02099L4.99999 6L3.97899 8.334H0.916992L3.36599 10.32L2.55099 13L4.99999 11.159Z" fill="url(#paint2_radial)"/>
+<path d="M18.021 16.334L17 14L15.979 16.334H12.917L15.366 18.32L14.551 21L17 19.159L19.449 21L18.634 18.32L21.083 16.334H18.021Z" fill="url(#paint3_radial)"/>
+<path d="M8.02099 16.334L6.99999 14L5.97899 16.334H2.91699L5.36599 18.32L4.55099 21L6.99999 19.159L9.44899 21L8.63399 18.32L11.083 16.334H8.02099Z" fill="url(#paint4_radial)"/>
+<defs>
+<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(12 3.5) rotate(90) scale(3.5 4.083)">
+<stop stop-color="#FF8000"/>
+<stop offset="1" stop-color="#FF4A00"/>
+</radialGradient>
+<radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(19 9.5) rotate(90) scale(3.5 4.083)">
+<stop stop-color="#FF8000"/>
+<stop offset="1" stop-color="#FF4A00"/>
+</radialGradient>
+<radialGradient id="paint2_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4.99999 9.5) rotate(90) scale(3.5 4.083)">
+<stop stop-color="#FF8000"/>
+<stop offset="1" stop-color="#FF4A00"/>
+</radialGradient>
+<radialGradient id="paint3_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(17 17.5) rotate(90) scale(3.5 4.083)">
+<stop stop-color="#FF8000"/>
+<stop offset="1" stop-color="#FF4A00"/>
+</radialGradient>
+<radialGradient id="paint4_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(6.99999 17.5) rotate(90) scale(3.5 4.083)">
+<stop stop-color="#FF8000"/>
+<stop offset="1" stop-color="#FF4A00"/>
+</radialGradient>
+</defs>
+</svg>

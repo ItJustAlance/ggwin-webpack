@@ -1,0 +1,175 @@
+.popup-container.popup-popolnit
+  .popup-position
+    .popup-wrapper.popup__popolnit-wrapper
+      .popup__popolnit-left
+        .popup-title Пополнение баланса
+        .popup__popolnit__header
+          .popup__popolnit-buttons
+            .popup__popolnit-buttons__button
+              button Деньги
+            .popup__popolnit-buttons__button
+              button Банки
+            .popup__popolnit-buttons__button.active
+              button Телефон
+            .popup__popolnit-buttons__button
+              button Скины
+            .popup__popolnit-buttons__button
+              button Крипта
+          .popup__popolnit-button__result
+            button.popup__popolnit-button2.active
+                img(src="img/mts.png")
+            button.popup__popolnit-button2
+                img(src="img/beline.png")
+            button.popup__popolnit-button2
+                img(src="img/tele2.png")
+
+        .popup__popolnit__footer
+          .popup__popolnit__row-phone
+            label Введите номер
+            input.inout(type="text")
+          .popup__popolnit__exchange
+            .exchange__row
+              .exchange__minus
+                button.exchange__btn-minus
+              .exchange__input
+                img.ico(src="img/valuta.svg")
+                input.input(type="text")
+              .exchange__icon
+              .exchange__input
+                img.ico(src="img/i-rub.svg")
+                input.input(type="text")
+              .exchange__plus
+                button.exchange__btn-plus
+          .popup__popolnit__submit
+            button.btn.btn-green Подтвердить
+      .popup__popolnit-right
+        .popup__close
+          +svgMono('close')
+        .popup__popolnit__bonus
+          .title Бонусы к пополнению
+          .popup__popolnit__row
+            label Промокод
+            input(type="text" placeholder="Введите код")
+          ul.popup__popolnit__bonus-sale
+            li
+              span.ico(style="background: #6E48A7") 10%
+              span.text Промокод
+            li
+              span.ico(style="background: #FF9900") 10%
+              span.text Бонус выходных
+            li.active
+              span.ico(style="background: #C50D2C") 10%
+              span.text “GG” в нике
+
+.popup-container.popup-edit-user
+  .popup-position
+    .popup-wrapper.f-column
+      .popup-title Редактирование профиля
+      .popup__close
+        +svgMono('close')
+      .popup-tabs
+        .popup-tabs__item.j-tab-user-ava.active
+          +svgMono('crop-edit')
+          | Аватар
+        .popup-tabs__item.j-tab-user-nick
+          +svgMono('crop-edit')
+          | Никнейм
+      #tab__user-nick.popup-tabs__box
+        .row-input
+          label Ваш ник
+          .b-input
+            input.input(type="text")
+          .btn.btn-bord.btn-svg
+            +svgMono('galka')
+        .change-color
+          label Выберите цвет
+          .change-color__list
+            button.btn-color
+              span.clr(style="background: #EB5050")
+            button.btn-color
+              span.clr(style="background: #507CEB")
+            button.btn-color
+              span.clr(style="background: #EB9A50")
+            button.btn-color.active
+              span.clr(style="background: #EB5088")
+            button.btn-color
+              span.clr(style="background: #923DFF")
+            button.btn-color
+              span.clr(style="background: #FF8038")
+            button.btn-color
+              span.clr(style="background: #41C846")
+        .change-color__btn
+          button.btn
+            | Оплатить
+            img(src="img/valuta.svg")
+            | 21,54
+      #tab__user-ava.popup-tabs__box(style="display:block")
+        .upload-ava
+          .upload-ava__left
+            .upload-ava__upload
+              input(type="file")
+            button.btn.btn-bord.upload-ava__random
+              +svgMono('random')
+              | Рандом
+          .upload-ava__right
+            p 1. Выберите гифку на giphy.com <br>и вставьте ссылку
+            .row-input
+              label Ваш ник
+              .b-input
+                input.input(type="text" placeholder="Введите ссылку")
+              .btn.btn-bord.btn-svg
+                +svgMono('galka')
+            p 2. Нажмите “Оплатить” и аватарка <br>станет доступна в профиле
+        .change-color__btn
+          button.btn
+            | Оплатить
+            img(src="img/valuta.svg")
+            | 21,52
+
+
+.popup-container.popup-create-ticket
+  .popup-position
+    .popup-wrapper.f-column
+      .popup-title Создание тикета
+      .popup__close
+        +svgMono('close')
+      .row-form
+        input.input(type="text" placeholder='Тема обращения')
+      .row-form
+        textarea.input(placeholder='Напишите о вашей проблеме')
+      .row-form
+        button.btn.btn--full Создать тикет
+      .bottom-small Примерное время ответа 24 часа
+
+
+
+.popup-container.popup-inline
+  .popup-position
+    .popup-wrapper.f-column
+      .popup-title Проверка честной игры
+      .popup__close
+        +svgMono('close')
+      .popup__cont
+        h3 Данные раунда
+        .round-data
+          +svgMono('security')
+          p <span>ХЭШ:</span> 8bb569186c6737a36f0b65cd28a548ce4d94b1f26bb8124474c7e1abbd18a3d5 <br>
+            | <span>СОЛЬ:</span> 65b21373f5268c35ee5d1654a16ee476
+        h3 Как проверить?
+        p Хэш раунда генерируется по формуле sha256(Crash + Соль)
+          | Для этой игры 2.01+70f3bd8caa32b365b0301aa052b4bd56
+          | Вы можете подставить данные и проверить хэш на <a href="#">сайте генераторе sha256</a>
+        h3 Как проверить?
+        p Перед началом каждой игры случайным образом генерируются соль
+          | (32 случайных символа) и число, на котором закончится игра.
+
+        p Они складываются между собой и хешируются с помощью sha256,
+          | после чего этот хэш отображается до того как начнется игра.
+
+        p В конце игры можно увидеть соль, с помощью которой была произведена генерация,
+          | и убедиться, что хэш не менялся и все совпадает.
+        .bottom-smile
+          +svgMono('smile2')
+          .text
+            | Это все означает, что мы никак не можем повлиять на исход игры
+            | заранее или во время самой игры.

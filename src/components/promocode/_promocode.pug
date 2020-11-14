@@ -1,0 +1,79 @@
+.wrapper-content
+  .b-bonus
+    .b-bonus__title Бонусы
+    h3 Вознаграждение за сайт в имени
+    p Зависит от времени, которое наш сайт находится у вас в никнейме в Steam
+    .b-bonus__scroll-sale
+      .b-bonus-sale.active
+        .proc 10%
+        .days 1 день
+      .b-bonus-sale.active
+        .proc 11%
+        .days 1 неделя
+      .b-bonus-sale.active
+        .proc 12%
+        .days 2 недели
+      .b-bonus-sale.active
+        .proc 13%
+        .days 3 недели
+      .b-bonus-sale
+        .proc 14%
+        .days 4 недели
+      .b-bonus-sale
+        .proc 15%
+        .days 5 недель
+      .b-bonus-sale
+        .proc 20%
+        .days 6 недель
+      .b-bonus-sale
+        .proc 20%
+        .days 6 недель
+      .b-bonus-sale
+        .proc 20%
+        .days 6 недель
+      .b-bonus-sale
+        .proc 20%
+        .days 6 недель
+    .b-bonus__promocode-info
+      h3 Промокод
+      p Если вы знаете секретный промокод - введите его <br>и получите бонусный предмет
+      .row-input
+        .b-input
+          input.input(type="text")
+        button.btn Сохранить
+      h3 Условия активации промо
+      ul.check-promo
+        li Вы должны пополнить <span class="price-inline"><img alt="" src="img/valuta.svg"> 1704</span>  или больше
+        li.active Steam профиль должен быть публичным
+        li Уровень Steam профиля 2 или выше
+        li Вы должны сыграть как минимум 30 часов в CS:GO. <br>Доступ к игровой информации должен быть открытый
+
+  .b-promo-banners
+    .b-promo-scrolling
+      .b-promo-banners__banner
+        img(src="img/ban1.png")
+      .b-promo-banners__banner
+        img(src="img/ban1.png")
+      .b-promo-banners__banner.active
+        img(src="img/ban1.png")
+      .b-promo-banners__banner
+        img(src="img/ban1.png")
+      .b-promo-banners__banner
+        img(src="img/ban1.png")
+      .b-promo-banners__banner
+        img(src="img/ban1.png")
+      .b-promo-banners__banner
+        img(src="img/ban1.png")
+      .b-promo-banners__banner
+        img(src="img/ban1.png")
+
+
+
+.sidebar-right.chat-r
+  include ../chat/_chat
+
+button.btn.float-btn-chat
+  +svgMono('btn-float-chat')
++inventarMarket()
++free-skin-info()
+
