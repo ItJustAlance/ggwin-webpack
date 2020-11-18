@@ -1,6 +1,6 @@
 
 .wrapper-content
-  .sidebar-left
+  .sidebar-left.invis-sm
     .block-gr.b-choese
       .b-choese__title Выберите коэффициент
       .b-choese__img
@@ -73,13 +73,82 @@
   .content
     .game-koleso
       .game-koleso__koleso
-        img(src="img/koleso.svg")
+        .game-koleso__circle
+          img(src="img/koleso.svg")
         .game-koleso__winner Победитель
         .game-koleso__rate
           span 3X
       .game-koleso__secur
         +svgMono('security')
         | Победитель определяется через сервис random.org
+    .sidebar-left.block-sm
+      .block-gr.b-choese
+        .b-choese__title Выберите коэффициент
+        .b-choese__img
+          img.ico(src='img/baraban.svg' alt='')
+          .rate 3X
+        ul.b-choese__rates
+          li
+            button.bord-red 2X
+          li
+            button.bord-blue 3X
+          li
+            button.bord-green 5X
+          li
+            button.bord-purple.active 50X
+        .b-choese__btn
+          button.btn Сделать ставку
+      .block-gr.block-inventar
+        if aut == true
+          .b-inventar
+            .inventar-title Выбрано
+            .inventar-top
+              .balance
+                img(src='img/valuta.svg')
+                .cost 21.54
+              .change
+                img(src='img/i-gun.svg')
+                .cost 34
+              .all-check
+                span.text Выбрать всё
+                label.checker(for='id2')
+                  input#id2(type='checkbox')
+                  span
+                    img(src='img/galka.svg')
+            // end invertar-top
+            .inventar-cont
+              .inventar-list
+                .inventar-scroll
+                  +invent('active', 'blue')
+                  +invent('', 'red')
+                  +invent('', 'pink')
+                  +invent('', 'blue')
+                  +invent('', 'blue')
+                  +invent('', 'blue')
+
+                // end invent-scroll
+              // end inventar-list
+            // end inventar-cont
+            .inventar-bottom
+              button.btn.btn-exchange.js-open-market
+                +svgMono('i-market')
+                | Магазин
+              button.btn.btn-green.btn-dw
+                +svgMono('i-dw')
+            // end inventar-bottom
+          // end b-inventar
+        else
+          .inventar-locked
+            .inventar-locked__center
+              .text
+                a(href='#') Авторизуйтесь
+                |  на сайте чтобы использовать
+              .b-btn
+                button.btn-steam
+                  +svgMono('steam')
+                  | Войти через Steam
+          // end inventar-locked
+      // end block
 
     .rate-listings
       .rate-listings__scroll

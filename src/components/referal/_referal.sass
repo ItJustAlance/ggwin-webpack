@@ -5,11 +5,16 @@
   flex-direction: column
   margin-right: 2rem
   margin-bottom: 0
+  +r($lg)
+    padding: 1rem
+    margin-right: 0
 .crumb
   padding: 0
   margin: 0 0 1.7rem
   list-style: none
   width: 100%
+  +r($sm)
+    order: -1
   li
     font-size: 1.2rem
     display: inline-block
@@ -30,35 +35,75 @@
     overflow: auto
     flex: 1 1 auto
     display: flex
+    +r($sm)
+      flex-wrap: wrap
   &-left
     width: 60%
-    padding: 0 1rem
+    padding: 0 1rem 0 0
+    +r($lg)
+      padding-right: .5rem
+      width: 52%
+    +r($sm)
+      width: 100%
+      padding-right: 0
   &-right
     width: 40%
-    padding: 0 1rem
-
+    padding: 0 0 0 1rem
+    +r($lg)
+      padding-left: .5rem
+      width: 48%
+    +r($sm)
+      width: 100%
+      padding-left: 0
   &-stat
     width: 29rem
     text-align: center
     display: flex
     justify-content: center
+    +r($lg)
+      width: 20rem
+    +r($sm)
+      width: 100%
     &__full
       background: #14161C
       display: flex
       margin: 0 0 2rem
+      +r($lg)
+        margin-bottom: 1rem
+      +r($sm)
+        flex-wrap: wrap
   &-result
     padding: 2.7rem 0
     font-size: 1.6rem
     width: 19rem
+    +r($lg)
+      font-size: 1.4rem
+      padding: 2rem 0
+    +r($sm)
+      width: 100%
+      height: 14rem
+      position: relative
     &__title
       color: #fff
       text-align: center
       padding-bottom: 4.7rem
+      +r($lg)
+        padding-bottom: 3rem
+      +r($sm)
+        text-align: left
+        padding-left: 15rem
     &__lvl
       position: relative
       font-size: 2rem
       color: #fff
       margin-bottom: 3rem
+      +r($lg)
+        margin-bottom: 2rem
+        font-size: 1.6rem
+      +r($sm)
+        position: absolute
+        left: 1rem
+        top: 1rem
       .lvl
         position: absolute
         top: 0
@@ -67,46 +112,73 @@
         display: flex
         align-items: center
         justify-content: center
+        flex-wrap: wrap
+        .friend
+          color: #747A7C
+          font-size: 1.4rem
+          width: 100%
+          margin-top: .2rem
+          .ico
+            width: 1.8rem
+            height: 1.8rem
+            margin-right: .8rem
+            vertical-align: middle
     &__progress
       position: relative
       border-radius: 50%
       width: 18.7rem
       height: 18.7rem
+      +r($lg)
+        width: 13rem
+        height: 13rem
+        margin: 0 auto
     &__svg
       fill: none
       width: 18.7rem
       height: 18.7rem
-    &__svg circle
-      stroke-dashoffset: 0
-      transition: stroke-dashoffset 1s linear
-      stroke: #21262C
-      stroke-width: 1em
 
-    &__svg #bar
-      stroke: #FF8000
+
+
     &__prices
       text-align: center
       color: #747A7C
       font-size: 1.2rem
+      +r($sm)
+        text-align: left
+        padding-left: 15rem
     &__price1, &__price2
       color: #fff
       font-size: 1.6rem
       padding: 0 1rem
+      +r($lg)
+        font-size: 1.2rem
+      +r($sm)
+        padding-left: 0
       img
         width: 2rem
         margin-right: .5rem
+        +r($lg)
+          width: 1.5rem
+    &__price2
+      +r($sm)
+        padding-left: 1rem
+
     &__next-level
       color: #747A7C
       font-size: 1.2rem
       text-transform: uppercase
       text-align: center
       padding-top: 1rem
+      +r($sm)
+        text-align: left
+        padding-left: 15rem
   &-statistic
     &__right
       background: #161A1F
       padding: 0 2rem
       flex: 1 1 auto
-
+      +r($lg)
+        padding: 0 1rem
     &__graf
       background: url(../img/stat-graf-bg.png) 50% 50% no-repeat
       background-size: auto 100%
@@ -118,16 +190,28 @@
       margin-bottom: 2.9rem
       justify-content: center
       text-align: center
+      +r($lg)
+        height: 15rem
+        margin-bottom: 1.8rem
       &-icons
         width: 40%
+      &__icon
+        +r($lg)
+          img
+            height: 4.7rem
       &__title
         padding-top: 1.6rem
         color: #747A7C
         font-size: 1.2rem
+        text-transform: uppercase
+        +r($lg)
+          font-size: 1rem
       &__num
         padding-top: .4rem
         font-size: 2rem
         color: #fff
+        +r($lg)
+          font-size: 1.6rem
 
 
   &-promo
@@ -137,6 +221,8 @@
       font-size: 1.2rem
       padding-bottom: .7rem
       text-transform: uppercase
+      +r($lg)
+        font-size: 1rem
     &__row
       display: flex
     &__code
@@ -151,6 +237,8 @@
       justify-content: center
       font-size: 1.4rem
       color: #fff
+      +r($lg)
+
       &:after, &:before
         width: 1.2rem
         height: 1.2rem
@@ -172,6 +260,9 @@
       align-items: center
       justify-content: center
       background: none
+      +r($lg)
+        width: 4rem
+        height: 4rem
       &:hover
         border: 1px solid #747A7C
         .ico
@@ -188,6 +279,17 @@
     padding: 2rem
     margin-bottom: 2rem
     border-radius: .5rem
+    +r($lg)
+      padding: 1rem
+      margin-bottom: 1rem
+    &__right
+      display: flex
+      flex: 1 1 auto
+      align-items: center
+      +r($lg)
+        flex-wrap: wrap
+    &__input
+      flex: 1 1 auto
     &__left
       margin-right: 3rem
       &-title
@@ -195,12 +297,20 @@
         font-size: 1.2rem
         text-transform: uppercase
         padding-bottom: .2rem
+        +r($lg)
+          font-size: 1rem
       &-price
         font-size: 1.6rem
         color: #fff
+        white-space: nowrap
+        +r($lg)
+          font-size: 1.4rem
         img
           height: 2rem
           margin-right: 1rem
+          +r($lg)
+            height: 1.8rem
+            margin-right: .5rem
 
     &__submit
       margin-left: 1rem
@@ -213,6 +323,9 @@
         display: flex
         align-items: center
         justify-content: center
+        +r($lg)
+          width: 4rem
+          height: 4rem
         &:hover
           border: 1px solid #747A7C
           .ico
@@ -224,6 +337,12 @@
       color: #3B4042
       font-size: 1.2rem
       margin-left: 4rem
+      +r($lg)
+        margin-top: 1rem
+        width: 100%
+        margin-left: 0
+        br
+          display: none
   &-toggle
     background: #161A1F
     border-radius: .5rem
@@ -234,10 +353,14 @@
     display: flex
     align-items: center
     position: relative
+    +r($lg)
+      padding: 1rem
     &__title
       display: flex
       align-items: center
       min-height: 6rem
+      +r($lg)
+        min-height: 5rem
       &-icon
         width: 2.4rem
         height: 2.4rem
@@ -246,6 +369,7 @@
           height: 2.4rem
       &-name
         margin-left: 2rem
+        margin-right: 5rem
       &-arr
         width: 4rem
         height: 4rem
@@ -259,6 +383,8 @@
         align-items: center
         justify-content: center
         cursor: pointer
+        +r($lg)
+          right: 1rem
         .ico
           width: 1.3rem
           height: .8rem
@@ -276,9 +402,14 @@
     justify-content: space-between
     padding: 2rem
     margin-bottom: 2rem
+    +r($lg)
+      padding: 1rem
+      margin-bottom: 1rem
     &-title
       color: #fff
       font-size: 1.6rem
+      +r($lg)
+        font-size: 1.4rem
     &-right
       display: flex
       justify-content: flex-end
@@ -286,6 +417,8 @@
     &-text
       color: #747A7C
       font-size: 1.2rem
+      +r($lg)
+        font-size: 1rem
     &-status
       margin-left: 1rem
       font-size: 1.2rem
@@ -334,8 +467,14 @@
     border: 1px solid #1B1B1F
     border-radius: .5rem
     padding: 2rem 0
+    +r($lg)
+      padding: 1rem 0
+    +r($sm)
+      overflow: auto
 .table-level
   width: 100%
+  +r($sm)
+    min-width: 51rem
   tr:nth-child(2n+1) td
     background: #14161C
   &--active
@@ -353,14 +492,20 @@
     border-bottom: 1px solid #212126
     text-transform: uppercase
     padding: 0 2rem 2rem
+    +r($lg)
+      padding: 0 1rem 1rem
   td
     vertical-align: middle
     color: #fff
     font-size: 1.6rem
     padding: 4rem 2rem
+    +r($lg)
+      padding: 2rem 1rem
   &__level
     color: #747A7C
     font-size: 1.4rem
+    +r($lg)
+      font-size: 1.2rem
     span
       display: inline-flex
       background: #3B4042
@@ -372,18 +517,66 @@
       font-size: 1.2rem
       color: #fff
       margin-right: 1rem
+      +r($lg)
+        width: 2.4rem
+        height: 2.4rem
   &__depo
+    +r($lg)
+      font-size: 1.4rem
     img
       width: 2rem
       margin-right: 1rem
   &__bonus
     font-size: 1.4rem
+    +r($lg)
+      font-size: 1.2rem
   &__ref-bonus
     font-size: 1.4rem
     color: #747A7C
+    +r($lg)
+      font-size: 1.2rem
     span
       display: inline-block
       vertical-align: middle
       margin-right: 1rem
       color: #fff
+
+
+
+
+
+
+.ldBar
+  position: relative
+  width: 18rem !important
+  height: 18rem !important
+  +r($lg)
+    width: 13rem !important
+    height: 13rem !important
+  path.mainline
+    stroke-width: 8
+    stroke: #FF8000
+    stroke-linecap: round
+    +r($lg)
+      stroke-width: 5
+  path.baseline
+    stroke-width: 8
+    stroke: #21262C
+    stroke-linecap: round
+    +r($lg)
+      stroke-width: 5
+.ldBar.label-center > .ldBar-label
+  display: none
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  text-shadow: 0 0 3px #fff
+
+.ldBar-label:after
+  content: "%"
+  display: inline
+
+.ldBar.no-percent .ldBar-label:after
+  content: ""
 

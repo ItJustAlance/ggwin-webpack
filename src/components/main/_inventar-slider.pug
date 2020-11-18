@@ -4,16 +4,15 @@
 // include ../left-col/_left-column
 
 .wrapper-content
-  .sidebar-left.invis-sm
-    .block-gr.b-athorization
-      if aut == true
-        .b-athorization-img
-          +svgMono('aut-invent')
-          span.aut-text Выберите скины в инвентаре, чтобы сделать ставку
-      else
-        .b-athorization-img
-          img(src="img/auth.png")
-          a.aut-text(href="#") Авторизуйтесь, чтобы сделать ставку
+  .sidebar-left
+    .block-gr.b-slider-inventar
+      .slider-inventar
+        .price-inv
+          img(src='img/valuta.svg')
+          | 1704
+        .inventar-delete
+          +svgMono('delete')
+
     .block-gr.block-inventar
       if aut == true
         .b-inventar

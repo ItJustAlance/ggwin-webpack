@@ -5,6 +5,8 @@ PageList:
     ready: 100
   - file: main-page-autorization.html
     ready: 100
+  - file: inventar-slider.html
+    ready: 100
   - file: double-win.html
     ready: 100
   - file: double-win2.html

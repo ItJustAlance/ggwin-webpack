@@ -17,6 +17,8 @@
     min-height: 28rem
   &-img
     max-height: 24rem
+    +r($lg)
+      max-height: 20rem
     svg
       width: 18rem
       height: 18rem
@@ -24,6 +26,8 @@
       max-width: 100%
       max-height: 100%
       height: 100%
+      +r($lg)
+        max-height: 15rem
   .aut-text
     position: relative
     bottom: 0
@@ -36,6 +40,12 @@
   a.aut-text:hover
     color: #fff
 
+.b-slider-inventar
+  width: 100%
+  max-height: 38rem
+  min-height: 38rem
+  display: flex
+  flex-direction: column
 
 .b-inventar
   display: flex
@@ -92,8 +102,8 @@
         top: 1rem
         right: 1rem
       +r($sm)
-        top: 1.8rem
-        right: 1.2rem
+        top: 1rem
+        right: 1rem
       .text
         margin-top: 0
         +r($lg)
@@ -132,7 +142,8 @@
     font-size: 1.2rem
     padding: .5rem
     overflow: hidden
-
+    +r($lg)
+      padding: .4rem
   &-item
     background: #161A1F url(../img/item-blue.svg) 50% 50% no-repeat
     background-size: 60% auto
@@ -443,9 +454,9 @@
   margin-bottom: 0
   +r($sm)
     margin: 0 .5rem
+    min-height: 40rem
   &.block-sm
     +r($sm)
-      min-height: 40rem
       display: block !important
 
 
@@ -1043,20 +1054,23 @@
 
 
 ::-webkit-scrollbar
-  width: 8px
+  width: .4rem
   +r($lg)
     width: 0
 ::-webkit-scrollbar-track
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
-  border-radius: 3px
-  background: #212126
+  // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+  border-radius: .3rem
+
+  box-shadow: none
+  background: none
   +r($lg)
     background: none
     box-shadow: none
 ::-webkit-scrollbar-thumb
-  border-radius: 3px
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5)
-  background: linear-gradient(270deg, #FF8000 -114.43%, #FF4A00 100%)
+  border-radius: .3rem
+  // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5)
+  // background: linear-gradient(270deg, #FF8000 -114.43%, #FF4A00 100%)
+  background: #21252C
   +r($lg)
     box-shadow: none
     background: none

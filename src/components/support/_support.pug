@@ -6,7 +6,7 @@
           h1.h1-title Техподдержка
           .b-btn
             button.btn.btn--create-ticket Создать тикет
-        .block-support-50
+        .block-support-50.invis-sm
           .b-ticket-me
             .title Не могу вывести деньги
             .mess 2 сообщения
@@ -15,7 +15,7 @@
             | Закрыть тикет
     .block-support__content
       .block-support__row
-        .block-support-50.flex-d-col
+        .block-support-50.block-support__ticket.flex-d-col
           .list-ticket__scroll
             ul.list-ticket
               +b-ticket('t-new')
@@ -35,14 +35,23 @@
             .block-support__bottom-left
               .title Другие способы связи?
               .mess Напишите нам на почту или ВКонтакте
+              button.btn.open-chat-support Создать тикет
             .block-support__bottom-btns
               button.btn.btn-bord.red
                 +svgMono('s-gmail')
-                | gmail
+                span.tit gmail
               button.btn.btn-bord.blue
                 +svgMono('s-vk')
-                | ВКонтакте
-        .block-support-50.flex-d-col
+                span.tit ВКонтакте
+        .block-support-50.block-support__chat.flex-d-col
+          .chat-support--mob
+            .chat-close-mob
+              +svgMono('arr-right')
+            .b-ticket-me
+              .title Не могу вывести деньги
+              .mess 2 сообщения
+            .btn.btn-bord.btn--lock
+              +svgMono('i-lock')
           .chat-support
             .chat-support__messages
               .chat-support__message

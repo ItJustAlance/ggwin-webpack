@@ -3,44 +3,37 @@
     .b-bonus__title Бонусы
     h3 Вознаграждение за сайт в имени
     p Зависит от времени, которое наш сайт находится у вас в никнейме в Steam
-    .b-bonus__scroll-sale
-      .b-bonus-sale.active
-        .proc 10%
-        .days 1 день
-      .b-bonus-sale.active
-        .proc 11%
-        .days 1 неделя
-      .b-bonus-sale.active
-        .proc 12%
-        .days 2 недели
-      .b-bonus-sale.active
-        .proc 13%
-        .days 3 недели
-      .b-bonus-sale
-        .proc 14%
-        .days 4 недели
-      .b-bonus-sale
-        .proc 15%
-        .days 5 недель
-      .b-bonus-sale
-        .proc 20%
-        .days 6 недель
-      .b-bonus-sale
-        .proc 20%
-        .days 6 недель
-      .b-bonus-sale
-        .proc 20%
-        .days 6 недель
-      .b-bonus-sale
-        .proc 20%
-        .days 6 недель
+    .b-bonus-sale-days
+      .b-bonus__scroll-sale
+        .b-bonus-sale.active
+          .proc 10%
+          .days 1 день
+        .b-bonus-sale.active
+          .proc 11%
+          .days 1 неделя
+        .b-bonus-sale.active
+          .proc 12%
+          .days 2 недели
+        .b-bonus-sale.active
+          .proc 13%
+          .days 3 недели
+        .b-bonus-sale
+          .proc 14%
+          .days 4 недели
+        .b-bonus-sale
+          .proc 15%
+          .days 5 недель
+      .b-bonus-sale__progress
+        .b-bonus-sale__progress-bar(style="width: 33%")
     .b-bonus__promocode-info
       h3 Промокод
       p Если вы знаете секретный промокод - введите его <br>и получите бонусный предмет
       .row-input
         .b-input
           input.input(type="text")
-        button.btn Сохранить
+        button.btn
+          +svgMono('galka')
+          span.txt Сохранить
       h3 Условия активации промо
       ul.check-promo
         li Вы должны пополнить <span class="price-inline"><img alt="" src="img/valuta.svg"> 1704</span>  или больше

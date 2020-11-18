@@ -5,30 +5,100 @@
   text-align: center
   border-bottom: 1px solid #212126
   margin-bottom: 3.2rem
+  +r($sm)
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+  +r($lg)
+    padding: 2rem 0
+    margin-bottom: 2rem
   &__ava
     margin-bottom: 1.5rem
+    +r($sm)
+      max-width: 7.3rem
     img
       width: 10rem
+      +r($lg)
+        width: 7.6rem
+  &__bottom
+    +r($sm)
+      margin-left: 1rem
+      margin-bottom: 1.5rem
+      display: flex
+      align-items: center
+      flex-wrap: wrap
   &__nick
     color: #fff
     font-size: 1.6rem
     margin-bottom: 1rem
+    +r($lg)
+      font-size: 1.4rem
+    +r($sm)
+      text-align: left
+      width: 100%
   &__lvl
     font-size: 1.2rem
     color: #fff
     text-align: center
     margin-bottom: 3rem
+    +r($sm)
+      text-align: left
+      margin-bottom: 0
     span
       background: radial-gradient(50% 50% at 50% 50%, #FF8000 0%, #FF4A00 100%)
       display: inline-block
       padding: .2rem .8rem
       border-radius: .3rem
   &__btn
+    +r($sm)
+      width: 100%
     .btn
       width: 100%
+      text-transform: uppercase
+      +r($lg)
+        font-size: 1.2rem
+        padding-left: 1rem
+        padding-right: 1rem
+
+.sidebar-left__lk
+  .lk-referal
+    .referal-result__title
+      color: #747A7C
+      font-size: 1.2rem
 
 .lk-referal
   text-align: center
+  &--mob
+    display: none
+    background: #161A1F
+    border: 1px solid #1B1B1F
+    border-radius: .5rem
+    padding: 1rem
+
+    +r($sm)
+      display: flex
+      position: relative
+      .referal-result__prices
+        padding-left: 0
+      .link-referal-mob
+        position: absolute
+        top: 1rem
+        right: 1rem
+        .btn
+          width: 4.2rem
+          height: 4.2rem
+          padding: 0
+          align-items: center
+          justify-content: center
+          display: inline-flex
+        .ico
+          fill: #fff
+      .lk-referal
+        &-info
+          &__title
+            font-size: 1.6rem
+            padding-bottom: .7rem
   .referal-result
     padding: 1.7rem 1.9rem
     border-radius: .5rem
@@ -39,16 +109,20 @@
       padding-bottom: 3rem
     &__progress
       margin: 0 auto
+
     &__btn-more
       margin-top: 3rem
       .btn
         width: 100%
+        text-transform: uppercase
 .register-date
   text-align: center
   padding: 2rem
   font-size: 1.2rem
   text-transform: uppercase
   color: #747A7C
+  +r($sm)
+    font-size: 1rem
 
 .lk-content
   background: #111217
@@ -57,6 +131,8 @@
   overflow: auto
   flex: 1 1 auto
   padding: 2rem
+  +r($lg)
+    padding: 1rem
 
 
 .status-game
@@ -64,10 +140,18 @@
     width: 16.6666%
     padding: 0 .5rem
     display: flex
+    +r($sm)
+      min-width: 12rem
+      width: 33.3%
   &__icons
     text-align: center
     display: flex
     margin: 0 -.5rem 2rem
+    +r($lg)
+      margin-bottom: 1rem
+    +r($sm)
+      overflow: auto
+      margin-bottom: 0
   &-icon
     background: #161A1F
     width: 100%
@@ -76,6 +160,10 @@
     font-size: 1.2rem
     overflow: hidden
     position: relative
+    +r($lg)
+      font-size: 1rem
+      padding: 1rem
+
     &:after
       content: ""
       box-shadow: 0 0 6rem 1.5rem #fff
@@ -92,9 +180,16 @@
         background: url(../img/status-bg.png) 50% 50% no-repeat
         background-size: contain
         height: 10.2rem
+        +r($lg)
+          height: 5rem
+          max-width: 5rem
+          margin: 0 auto
       img
         max-width: 6.7rem
         max-height: 9rem
+        +r($lg)
+          max-height: 4.5rem
+          max-width: 4.5rem
     .title
       width: 100%
       color: #747A7C
@@ -104,9 +199,13 @@
     .desc
       font-size: 2rem
       color: #fff
+      +r($lg)
+        font-size: 1.6rem
       img
         max-height: 2rem
         vertical-align: middle
+        +r($lg)
+          max-height: 1.5rem
 
 
 .link-trade
@@ -114,6 +213,9 @@
   border-radius: .5rem
   padding: 2rem
   margin-bottom: 2rem
+  +r($lg)
+    padding: 1rem
+    margin-bottom: 1rem
   &__up
     display: flex
     justify-content: space-between
@@ -121,6 +223,8 @@
   &-title
     font-size: 1.6rem
     color: #fff
+    +r($lg)
+      font-size: 1.4rem
     .ico
       width: 2rem
       height: 2rem
@@ -142,9 +246,31 @@
     margin-right: 1rem
   &__btn
     width: 16rem
+    +r($sm)
+      width: auto
     .btn
       width: 100%
       height: 4.8rem
+      text-transform: uppercase
+      +r($sm)
+        height: 4rem
+        width: 4rem
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        padding: 0
+        .txt
+          display: none
+      .ico
+        display: none
+        +r($sm)
+          display: inline-block
+          max-width: 1.4rem
+          min-width: 1.4rem
+          height: 1.4rem
+          fill: #fff
+      +r($lg)
+        height: 4rem
   &__btn-edit-link
     width: 100%
     align-items: center
@@ -155,6 +281,8 @@
       vertical-align: middle
 .b-trade
   display: flex
+  +r($sm)
+    flex-direction: column
   &__tabs
     min-width: 10rem
     max-width: 10rem
@@ -164,10 +292,23 @@
     overflow: hidden
     position: relative
     height: 100%
+    +r($lg)
+      min-width: 8.5rem
+      max-width: 8.5rem
+    +r($sm)
+      min-width: 100%
+      width: 100%
+      margin-bottom: 1rem
     ul
       margin: 0
       padding: 0
+      +r($sm)
+        display: flex
+        width: 100%
+        justify-content: space-between
     li
+      +r($sm)
+
       &.active
         .ico
           fill: #FF8000
@@ -183,7 +324,15 @@
       width: 100%
       flex-direction: column
       font-size: 1.2rem
-
+      text-transform: uppercase
+      +r($lg)
+        font-size: 1rem
+      +r($sm)
+        flex-direction: row
+        align-items: center
+        height: auto
+        padding: 1.5rem 1.5rem
+        font-size: 1.2rem
       .ico
         width: 2.4rem
         height: 2.4rem
@@ -191,23 +340,33 @@
       span
         display: block
         padding-top: 1rem
-
+        +r($sm)
+          padding-top: 0
+          padding-left: 1rem
   &__box
     flex: 1 1 auto
     margin-left: 2rem
+    +r($lg)
+      margin-left: 1rem
+    +r($sm)
+      margin-left: 0
   &__list-inventar
     display: flex
     margin: -.5rem -.5rem 0
     flex-wrap: wrap
     .inventar-col
       width: 16.666%
+      +r($lg)
+        width: 20%
+      +r($sm)
+        width: 50%
 
-
-
-  &__list-inventar
   &__table-crash
     width: 100%
     display: table
+    +r($sm)
+      min-width: 57rem
+
     .rate-listings__etc
       max-width: 4rem
       width: 4rem
@@ -218,14 +377,24 @@
         min-width: 7rem
         height: 7rem
         margin-right: 1rem
+        +r($lg)
+          max-width: 5rem
+          min-width: 5rem
+          height: 5rem
+          margin-right: .5rem
     .crash-price
       color: #fff
       font-size: 1.6rem
+      +r($lg)
+        font-size: 1.4rem
       img
         height: 2rem
         vertical-align: middle
         margin-right: 1rem
         margin-top: -.5rem
+        +r($lg)
+          height: 1.5rem
+          margin-top: 0
   .table-crash
     &__row-th
       display: table-row
@@ -233,9 +402,10 @@
       font-size: 1.2rem
       padding-bottom: 1rem
       border-bottom: 1px solid #212126
-    &__rate
-    &__cases
-    &__winning
+      +r($lg)
+        font-size: 1rem
+        padding-bottom: .5rem
+
     &__row-td
       display: table-row
       &:nth-child(2n-1)
@@ -244,13 +414,20 @@
         &__date, &__id
           color: #747A7C
           font-size: 1.4rem
+          +r($lg)
+            font-size: 1.2rem
         &__date
           max-width: 16rem
           width: 16rem
+          +r($lg)
+            max-width: 12rem
+            width: 12rem
     &__td
       display: table-cell
       padding: 1rem
       vertical-align: middle
+      +r($lg)
+        padding: .5rem
 
     &__th
       display: table-cell

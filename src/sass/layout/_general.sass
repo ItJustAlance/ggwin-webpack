@@ -229,6 +229,7 @@ body
   overflow: hidden
   +r($lg)
     position: relative
+    padding-top: 1rem
   +r($sm)
     padding-top: 0
 .block-gr
@@ -247,14 +248,19 @@ body
   +r($lg)
     max-width: 100%
     padding-left: 1.2rem
+    padding-bottom: 1rem
   +r($sm)
     padding-left: 0
+    flex-direction: column
 .sidebar-left
   max-width: 38rem
   min-width: 38rem
   display: flex
   flex-direction: column
   transition: all 0.3s ease
+  +r($sm)
+    &.block-sm
+      display: flex !important
   &__lk
     max-width: 32rem
     min-width: 32rem
@@ -262,6 +268,14 @@ body
     background: #111217
     padding: 0 2rem
     border-radius: .5rem
+    +r($lg)
+      max-width: 29rem
+      min-width: 29rem
+      padding: 0 1rem
+    +r($sm)
+      max-width: 100%
+      min-width: 100%
+      order: -1 !important
   +r($lg)
     max-width: 26rem
     min-width: 26rem
@@ -287,6 +301,9 @@ body
   padding-left: 15px
   padding-right: 15px
 
++r($sm)
+  .invis-sm
+    display: none !important
 .block-sm
   display: none !important
   +r($sm)
