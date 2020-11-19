@@ -46,6 +46,134 @@
   min-height: 38rem
   display: flex
   flex-direction: column
+  position: relative
+  +r($lg)
+    max-height: 28rem
+    height: 28rem
+    min-height: 28rem
+  .slider-bottom
+    position: absolute
+    bottom: 2rem
+    left: 2rem
+    right: 2rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +r($lg)
+      left: 1rem
+      bottom: 1rem
+      right: 1rem
+    .arr-l, .arr-r
+      max-width: 4.8rem
+      min-width: 4.8rem
+      height: 4.8rem
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      border: 1px solid #3B4042
+      border-radius: .5rem
+      cursor: pointer
+      background: none
+      +r($lg)
+        max-width: 4rem
+        min-width: 4rem
+        height: 4rem
+      &:hover
+        border: 1px solid #FF7A00
+        .ico
+          fill: #fff
+      .ico
+        width: 2.4rem
+        height: 2.4rem
+        fill: #3B4042
+    .arr-r
+    .item-nums
+      text-align: center
+      color: #747A7C
+      img
+        margin-right: 1rem
+        vertical-align: middle
+
+.slider-inventar
+  .price-inv
+    position: absolute
+    top: 2rem
+    left: 2rem
+    color: #fff
+    z-index: 2
+    +r($lg)
+      top: 1rem
+      left: 1rem
+    img
+      height: 2rem
+      margin-right: 1rem
+      vertical-align: middle
+  .inventar-delete
+    position: absolute
+    top: 2rem
+    right: 2rem
+    z-index: 2
+    cursor: pointer
+    +r($lg)
+      top: 1rem
+      right: 1rem
+    &:hover
+      .ico
+        fill: #fff
+    .ico
+      width: 2.4rem
+      height: 2.4rem
+      +r($lg)
+        width: 2rem
+        height: 2rem
+  .slider
+    overflow: hidden
+    display: flex
+    &-container
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 70rem
+      position: relative
+      left: calc(50% - 27rem)
+      +r($lg)
+        width: 50rem
+        left: calc(50% - 17rem)
+      .slide
+        .inventar-item
+          background-color: rgba(0,0,0,0) !important
+          opacity: .8
+          .img
+            span
+              padding-top: 4rem
+              +r($lg)
+                padding-top: 3rem
+          .name
+            opacity: 0
+          .key
+            opacity: 0
+        &.active
+          .inventar-item
+            margin: 0 -2rem
+            opacity: 1
+
+            .img
+              width: 25rem
+              height: 25rem
+              +r($lg)
+                width: 17rem
+                height: 17rem
+            .name
+              font-size: 1.6rem
+              opacity: 1
+              +r($lg)
+                font-size: 1.4rem
+            .key
+              font-size: 1.4rem
+              opacity: 1
+              +r($lg)
+                font-size: 1.2rem
+
 
 .b-inventar
   display: flex
@@ -65,7 +193,7 @@
     padding: 0 0 1.5rem
     display: flex
     align-items: center
-    justify-content: space-between
+    position: relative
     margin: 0 2rem 2rem
     border-bottom: 1px solid #212126
     +r($lg)
@@ -87,12 +215,32 @@
       display: inline-block
       vertical-align: middle
     .change
-      margin-left: 1rem
+      margin-left: 2.5rem
       .cost
         color: #fff
-
+    .check-cancel
+      position: absolute
+      top: -1.5rem
+      right: 0
+      font-size: 1.2rem
+      color: #3B4042
+      text-transform: uppercase
+      background: none
+      &:hover
+        color: #fff
+        .ico
+          fill: #fff
+      .ico
+        width: 1.2rem
+        height: 1.2rem
+        vertical-align: middle
+        margin-right: 1rem
+        position: relative
+        margin-top: -.2rem
     .all-check
-      position: relative
+      position: absolute
+      top: 1.5rem
+      right: 0rem
       padding-right: 3rem
       color: #3B4042
       font-size: 1.2rem

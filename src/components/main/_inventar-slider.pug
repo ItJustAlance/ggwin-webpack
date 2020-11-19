@@ -12,7 +12,40 @@
           | 1704
         .inventar-delete
           +svgMono('delete')
-
+        .slider
+          .slider-container
+            .slide
+              .inventar-item.pink
+                .img
+                  span
+                    img(src='img/gun1.png' alt='')
+                .bottom
+                  .name Dual Berettas
+                  .key Sundown
+            .slide.active
+              .inventar-item.pink
+                .img
+                  span
+                    img(src='img/gun1.png' alt='')
+                .bottom
+                  .name Dual Berettas
+                  .key Sundown
+            .slide
+              .inventar-item.pink
+                .img
+                  span
+                    img(src='img/gun1.png' alt='')
+                .bottom
+                  .name Dual Berettas
+                  .key Sundown
+      .slider-bottom
+        button.arr-l
+          +svgMono('s-arr-l')
+        .item-nums
+          img(src='img/i-gun.svg')
+          | 3/32
+        button.arr-r
+          +svgMono('s-arr-r')
     .block-gr.block-inventar
       if aut == true
         .b-inventar
@@ -24,7 +57,10 @@
             .change
               img(src='img/i-gun.svg')
               .cost 34
-            .all-check
+            button.check-cancel
+              +svgMono('close')
+              | ОЧИСТИТЬ
+            .all-check(style="display:none")
               span.text Выбрать всё
               label.checker(for='id2')
                 input#id2(type='checkbox')
